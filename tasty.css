@@ -1,0 +1,1683 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+ 
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;    
+    
+
+}
+
+
+li{
+    list-style-type: none;
+    
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover{
+  transition: 0.5s;
+}
+
+
+
+header {
+    /* position: relative; */
+    background-color:  #031629;
+    padding : 0 2rem;
+    margin-top: 0;
+    
+   
+}
+
+
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}
+
+  
+.logo img{
+    width : 20%;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-top-right-radius: 60%;
+    padding-top: 2%;
+    margin-bottom: 1%;  
+    
+}
+
+.links{
+    display: flex;
+    gap: 1.5rem;
+    
+ 
+}
+
+.mobileContainer{  
+ display: none;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: end;
+  padding: 10px;
+  flex-basis: 100%;
+  background-color: rgba(255, 255, 255,0.95);
+  text-transform: uppercase;
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 9999;
+  
+  
+}
+
+.mobileContainer.show-menu{
+  
+    display: block;
+}
+
+#mobile{
+  margin-top: 0.7rem;
+}
+
+#mobile li{
+  
+  justify-content: center;
+  margin-top: 1.5rem;
+ 
+ 
+ 
+}
+
+#mobile li{
+  text-align: center;
+}
+
+#mobile li a{
+  color: green;
+  align-items: center;
+}
+
+  .mobileContainer  li a:hover{
+  color: white;
+  
+}
+
+#mobile  .orderNow a{
+  background-color: olivedrab;
+    color: white;
+    width : 10rem;
+    padding:  0.5% 0 0.5% 0;
+   text-align: center;
+
+}
+
+
+
+.navbar a{
+    text-transform: uppercase;
+    font-weight: 500;
+     color: green ;
+    font-size: 1rem;
+    
+}
+
+ .navbar .orderNow a{
+    background-color: olivedrab;
+    color: white;
+    width : 10rem;
+    padding:  3% 0 3% 0;
+   text-align: center;
+  
+
+}
+
+ .navbar a:hover{
+    scale: 1.05 2s ease;
+    color: white;
+    padding:3%
+   
+}
+
+.navbar .orderNow a:hover{
+    color: green;
+    background-color: white;
+}
+
+
+
+.navbar .toggle_btn{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+/*...........Styling for homepage slideshow*/
+
+/*----Styling for the sliding carousel------*/
+
+main {
+  background-color: #031629;
+  margin-top: 1%;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    /* max-width:1200px; */
+    position: relative;
+    margin: 0 auto;
+  
+}
+  
+
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+    height: 500px;
+  
+    
+  }
+
+
+  .mySlides img{
+    height: 100%;
+    width: 100%;
+  }
+
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+ 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color:rgba(3, 22, 41,0.8);
+  }
+
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text span{
+    background-color: #031629;
+    padding:  5px 10px;
+    border-radius: 10px;
+  }
+
+/* Number text (1/4etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+.active, .dot:hover {
+    background-color: #717171;
+  }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .tasty{
+    border-bottom: 3px solid #031629;
+  }
+
+
+  .aboutUs{
+    margin : 5rem 10rem;
+    text-align:center;
+    
+  }
+
+  .aboutUs p {
+   
+    color: #031629;
+    font-weight: 525;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    text-align:center;
+  
+  }
+
+  .aboutUs a{
+    display: inline-block;
+    /* font-size: 1.2rem; */
+    margin: 2rem 1rem 0 2rem;
+    border : 3px solid #031629;
+    color: #031629;
+    padding:1%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+    
+  }
+
+  .aboutUs a:hover{
+    color: white;
+    background-color: #031629;
+  }
+
+  .aboutUs a:active{
+    color: white;
+    background-color: olivedrab;
+    border : 3px solid white;
+
+  }
+
+  .specialOrder{
+    display: flex;
+    justify-content: space-around;
+    background-color: #031629;
+    
+  }
+  .specialOrder img{
+    margin: 2rem 0;
+    width: 40%;
+    height:40%;
+  }
+
+  .specialOrder div{
+    color: white;
+    margin-top : 90px;
+    width: 30%;
+    border: 2px solid white;
+    background-color: green;
+    height: fit-content;
+
+  }
+  
+
+  .specialOrder h4{
+    font-family: 'Kaushan Script', cursive;
+    padding: 2%;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom:2px solid white;
+   
+  }
+
+  .specialOrder p{
+    padding: 4%;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .specialOrder .inquiry{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1% auto;
+    border:none;
+    gap:4%;
+  
+  }
+
+  .specialOrder .inquiry a{
+    padding:1% 3%; 
+  }
+
+ 
+  .specialOrder a{
+    color: #031629;
+    background-color: white;
+    padding:1%; 
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    
+  }
+
+
+  .specialOrder .click{
+    border:none;
+    margin:1% auto;
+    text-align: center;   
+   width: 100%; 
+  
+  }
+
+ 
+
+  .specialOrder a:hover{
+    color: white;
+    border: 2px solid #031629;
+    background-color: #031629;
+  }
+
+  
+
+  /*-----------Styling for footer---------*/
+
+  footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0,0.95);
+    /* gap: 20%; */
+    color: white;
+    width: 100%;
+    font: bold;
+    padding: 3.45rem 3.1rem 3.45rem 2rem;
+    margin-top: 1%;
+    align-items: center;
+    
+
+  }
+
+
+  .footer-left{
+    flex-basis: 20%;
+    margin-right: 6rem;
+   
+  
+    
+  }
+
+
+ .footer-links a{
+    font-size: 0.7rem;
+    color: white;
+    padding: 0.2% 1.5%;
+    /* margin: 2% 0;  */
+   
+  }
+
+  .footer-center{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7%;
+    margin-right: 3.5rem;
+  
+   
+  }
+
+  
+
+  .footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .footer-right div{
+    display: flex;
+    gap: 1rem;
+    padding: 10%;
+  }  
+  
+   
+  .footer-right i:active{
+    background-color: olivedrab;
+  }
+
+  .footer-right i:hover{
+    color: white;
+    background-color: #031629;
+  }
+  
+
+  .footer-right i{
+    background-color: white;
+    color: #031629;
+    font-size: 1.25rem;
+    padding: 1rem;
+  
+    
+  }
+
+ 
+
+
+  .footer-links a:hover{
+    color:#031629;
+    background-color: white;
+
+  }
+
+  .footer-right .pollecode:hover{
+    color:#031629;
+    background-color: white;
+  }
+
+  .footerlogo img{
+    width : 20%;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-top-right-radius: 60%;
+    padding-top: 2%;
+    margin-bottom: 1%;  
+
+
+  }
+
+   .footer-center .email  #lastEmail{
+    color: green;
+  }
+
+
+  
+
+  /*.......Styles for about-us Page..........*/
+
+  .aboutUsPage{
+    max-width:1200px;
+    margin : 0 auto;
+    margin-top : 3%;
+    /* height: 500px; */
+  }
+
+  .aboutUsPage img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .teamsection{
+    background-color: #031629;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;   
+    row-gap: 7%;
+  }
+
+  .teamsection h4{
+    width: 100%;
+    background-color: rgb(163, 42, 42);
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  .teamsection a{
+    display: inline-block;
+    text-align: center;
+ 
+  }
+
+  .teamsection div span{
+    color: #031629;
+    background-color: white;
+    padding: 1% 10%;
+  }
+
+  .teamsection .team .wrapImagesUp section,  .teamsection .team .wrapImagesBottom  section{
+    width: 15rem;
+    /* height: 15rem; */
+    
+  }
+
+  .wrapImagesUp, .wrapImagesBottom {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+  }
+
+  .wrapImagesBottom{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+   .role{
+    display: flex;
+    justify-content: center;
+    margin-top:1%;    
+    background-color: rgb(163, 42, 42);
+   }
+   
+
+  .role:hover{
+    background-color:#031629;
+  }
+ 
+    
+  
+
+  .role a{
+    color: white;
+    display: inline-block;
+    padding: 10px ;
+  
+  }
+
+  .person-info{
+    display: none;
+  }
+
+  
+
+    
+  .teamsection img{
+    width: 100%;
+    height: 100%;
+    border: 5px solid white;
+    border-top-right-radius: 50px;
+  }
+
+  
+/*........Styling the about  team pages........*/
+section.teamMember {
+  
+  padding: 1rem 5rem;
+  text-align: center;
+  background-color: #031629;
+  color: whitesmoke;
+ 
+}
+
+section.teamMember span {
+  font-size: 3rem;
+  font-family: 'Kaushan Script', cursive;
+  display: inline-block;
+  
+}
+
+section.teamMember p {
+  line-height: 2;
+  margin: 2rem 0
+
+}
+
+section.teamMember a {
+  background-color: white;
+  color: #031629;
+  padding: 7px 40px;
+  font-weight: 700;
+  border-radius: 15px;
+}
+
+
+
+
+/*............Styling for our gallery page........*/
+
+.gall{
+  background-color:white;
+  text-align: center;
+  
+}
+
+.ourgallery{
+  font-size: 3rem;
+   font-family: 'Kaushan Script', cursive;
+   
+}
+
+
+.gallery  {
+  margin: 2%;
+ display: flex;
+ flex-wrap: wrap;
+ /* flex-direction: column; */
+ justify-content: space-around; 
+ gap: 10px; 
+
+}
+
+.gallery  img{
+  flex-basis: 20%;
+  width: 20%;
+  height: 30%;
+  flex-grow: 2;
+}
+
+
+
+.gall a{
+  margin-bottom: 1%;
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #031629;
+  color: white;
+  border-radius: 15px;
+ 
+}
+
+.gall a:hover{
+  color: #031629;
+  background-color: white;
+  border: 10px solid #031629;
+}
+
+
+/*.....Styles for menu page*/
+
+#menuMain{
+  background-color: white;
+}
+
+#menuMain h4{
+ text-align: center;
+}
+
+ .menuSpan{
+  margin-top: 8%;
+  text-align: center;
+ }
+
+ .menuSpan span{
+  cursor: pointer;
+
+ }
+
+ .menuSpan span {
+  color: white;
+  display: inline-block;
+  margin: 2% 1%;
+  padding: 10px 30px;
+  background-color: #031629;
+ 
+ 
+ }
+
+ .menuSpan span:hover{
+  background-color: olivedrab;
+ }
+ 
+
+ .menuSpan span.default-color{
+  background-color: olivedrab;
+ }
+ 
+
+  .menuSpan .default-color:hover{
+  background-color:#031629;
+ }
+
+ .mealOfTheDay{
+  color :#031629;
+
+   }
+
+   .mealOfTheDay .mealName{
+    text-align: center;
+    border-bottom: 5px solid olivedrab;
+    margin-bottom: 1rem;
+   }
+
+ .meals section{
+  display: flex;
+  justify-content: space-around; 
+  gap: 10px; 
+  flex-wrap: wrap;
+ }
+
+ .meals section section{
+  flex-basis: 40%;
+  background-color: olivedrab;
+
+ 
+ }
+
+ .meals section section h3{
+  text-align: center; 
+  padding: 10px 0 0 0;
+ }
+
+ .meals section section p{
+  text-align: center;
+  padding: 5px 20px;
+ }
+
+  .hide{
+  display:none;
+ }
+
+ /* styles.css for cart */
+#cartContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: olivedrab;
+  display: none;
+  z-index: 9999;
+}
+
+#cartContainer-onPhone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: olivedrab;
+  /* z-index: 9999; */
+}
+
+#cartContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 5px;
+  background-image: url(./Images/yeahyeah.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+ 
+}
+
+#cartContainer-onPhone #cartContent {
+  position: relative;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  margin: -0.5rem 1rem 1.5rem 0;
+  background-image: url(./Images/yeahyeah.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30rem;
+ 
+}
+
+#cartContainer-onPhone #cartContent h1{
+  background-color: white;
+  margin-bottom: 0.2rem;
+}
+
+#cartContainer-onPhone #cartContent label{
+  background-color:#031629;
+  padding: 0.1rem 0.5rem ;
+  
+}
+
+.orderpage #menu{
+  font-size: small;
+}
+
+.orderpage #forButton{
+  margin-top: -2.7rem;;
+
+}
+
+.orderpage #forButton button{
+  font-size: small;
+}
+
+.orderpage #menu li  {
+display:flex;
+/* gap:2px; */
+width:14rem;
+
+
+}
+
+.orderpage #menu #mealName{
+  max-width: 1.2rem;
+}
+
+
+
+
+
+
+#closeCart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size:large;
+  border: 1px solid #031629;
+  padding: 8px;
+}
+
+#OrdercloseCart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size:large;
+  border: 1px solid #031629;
+  padding: 8px;
+}
+
+
+
+
+#closeMobile {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size:large;
+  padding: 8px;
+  border : 1px solid olivedrab;
+}
+
+
+
+
+/*style for cart*/
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 20px; 
+}  */
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+#menu{
+  height: 22rem;
+  width: 30rem;
+}
+
+.label{
+  text-align: center;
+  
+}
+
+label {
+  font-weight: bold;
+  text-align: center;
+  color:white;
+}
+
+select {
+  margin: 20px 0;
+  padding: 5px;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ #menu li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+li .mealName{
+  flex-basis: 40%;
+  
+}
+
+li img{
+  width: 10%;
+  height: 10%;
+  border-radius: 10px;
+}
+
+li input{
+  width : 3rem;
+  flex-basis: 5%;
+ 
+ 
+}
+
+#forButton{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color:#031629;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  
+
+}
+
+#total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.alert {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+/*--contact page css--*/
+
+
+
+.contact-P{
+  margin: 1rem auto;
+ width: 70%;
+ text-align: justify;
+ line-height: 1.5;
+ 
+}
+form {
+  max-width: 25rem;
+  margin: 0 auto;
+  height: 25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*-------Reservation form---------*/
+#reservation-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#reservation-form {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 9999;
+  /* max-width: 400px; */
+  background-color:#031629;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
+
+#close-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  border: 1px solid olivedrab;
+}
+
+form label {
+  margin-top: 20px;
+
+}
+
+form label[for = 'party-size']{
+  display: block;
+ text-align: start;
+}
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.fa-times{
+  border: 1px solid olivedrab;
+  padding: 5px;
+  font-size: small;
+}
+
+.contact .ourgallery{
+  margin-top: 1rem;
+}
+
+
+
+
+ 
+
+   
+  /*.................Styles for media queries..................*/  
+
+
+
+    /* CSS rules for touch events on mobile devices */
+  
+
+    
+ 
+  @media screen and (max-width: 480px) {
+
+    #cartContent {
+      position: relative;
+    }
+
+    header{
+      top:0;
+      position: fixed;
+      z-index: 999;
+      height : 5rem;
+      
+    }
+
+    .logo {
+      margin-top: 1rem;
+      height: 2.5rem;
+      
+    }
+
+    .logo img{
+      margin-top: -0.7rem;
+      width: 29%;
+      
+    }
+
+    h4{
+      
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    main{
+   
+      margin-top: 6rem;
+    }
+
+    *{
+      font: 1rem;
+    }
+   
+    .links{
+        display: none;
+        
+       
+     }
+    
+     .teamsection h4{
+      margin-top: 1rem;
+     }
+  
+     .slideshow-container {
+      position: relative;
+      margin: 1rem 1rem 0 1rem;
+      height: 17rem; 
+      
+     }
+
+     #menuMain{
+      /* max-width: 500px; */
+      position: relative;
+      margin: 6rem 1rem 0 1rem;
+      height: 17rem; 
+     }
+
+     #menuMain h4{
+        
+        margin-top: 5px;
+     }
+
+     
+  
+     .mySlides{
+     
+      height: 16.98rem;
+      text-align: center;
+      
+     }
+
+     
+  
+  
+     .text {
+      
+      font-size: 0.7rem;
+      margin-top: 3px;
+      
+    } 
+     
+     
+     
+     .navbar .toggle_btn {
+         display: block;
+        
+   
+     } 
+    
+     
+   
+      .navbar .links.action_btn{
+         display: flex;
+       
+     } 
+   
+     
+     .aboutUs{
+      width: 20rem;
+      margin: 1.3rem auto;
+      font: 1rem;
+     
+      
+     }
+
+     .aboutUs.phone{
+      margin-top: 16%;
+     }
+  
+     .specialOrder{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    
+     }
+
+  
+     .specialOrder img, .specialOrder div{
+      width: 80%;
+     }
+
+     .specialOrder .last{
+      
+      margin-bottom: 5rem;
+     
+      
+     }
+   
+   footer{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   }
+
+   .footer-left {
+    display: none;
+     
+   }
+
+  
+
+   .footer-center{
+    margin-left: 3rem;
+   }
+
+   .footer-right {
+    margin-right: 3rem;
+   }
+
+   .footer-right i{
+   
+    font-size: small;
+   }
+   
+
+   .teamsection{
+    height: 1450px;
+   }
+
+   .wrapImagesUp, .wrapImagesBottom {
+    
+    flex-direction: column;
+    gap: 50px;
+   justify-content: space-between;
+   margin-bottom: 80px;
+   
+  }
+
+  .wrapImagesUp section span, .wrapImagesBottom section span{
+    display: inline-block;
+    width:70%;
+    border-radius: 0.6rem;
+    
+  }
+
+
+  .teamsection img{
+    
+    border-top-right-radius: 0;
+    width: 70%;
+    
+  }
+
+  .team{
+    margin-top: -20%;
+  }
+
+  .role{
+    background: none;
+  }
+
+    
+  .meals section{
+    flex-direction: column;
+    gap: 10px; 
+    margin: 0 1rem;
+   }
+
+   .menuSpan {
+    margin-top: 20%;
+   
+   }
+
+   /*......Gallery page media qery*/
+
+   .gallery{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+   }
+
+   .gallery  img{
+    flex-basis: 100%;
+    width: 90%;
+    height: 30%;
+  
+  }
+
+  .contact{
+    margin-top: 5rem;
+  }
+
+  .contact form{
+    margin: 1rem 3rem;
+  }
+
+ }
+
+    @media screen and (min-width: 481px) and (max-width : 768px) {
+
+      header{
+        top:0;
+        position: fixed;
+        z-index: 999
+        
+      }
+
+      .navbar .toggle_btn {
+        display: block;  
+  
+    } 
+   
+  
+     .navbar .links.action_btn{
+        display: flex;
+      
+    } 
+
+    .links{
+      display: none;
+    }
+
+    main{
+   
+      margin-top: 7rem;
+    }
+
+    .slideshow-container, #menuMain {
+      position: relative;
+      margin: 1rem 1rem 0 1rem;
+      height: 17rem; 
+      
+     }
+
+     .mySlides{
+     
+      height: 16.98rem;
+      text-align: center;
+      
+     }
+
+     
+
+     .text {
+      
+      font-size: 0.7rem;
+      margin-top: 3px;
+      
+    } 
+
+    .aboutUs{
+      width: 20rem;
+      margin: 1.3rem auto;
+      font: 1rem;
+     
+      
+     }
+
+
+     .aboutUs.phone{
+      margin-top:50%;
+     }
+
+     .specialOrder {
+      display: flex;
+  
+      
+     }
+
+     .specialOrder{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    
+     }
+
+     
+  
+     .specialOrder img, .specialOrder div{
+      width: 80%;
+     }
+
+     .specialOrder .last{
+
+      margin-bottom: 5rem;
+     
+      
+     }
+
+     #menuMain{
+      
+      position: relative;
+      margin: 8rem 1rem 0 1rem;
+      height: 17rem; 
+  
+      
+     }
+
+     #menuMain h4{
+  
+        margin-top: 1rem;
+       
+     }
+
+
+     footer{    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+     }
+  
+     .footer-left {
+      display: none;
+       
+     }
+  
+    
+  
+     .footer-right{
+      margin-top: 1rem;
+     }
+
+     .footer-right div{
+      margin-right: 9rem;
+     
+     
+     }
+    
+  
+     .footer-right .pollecode{
+      margin-top: 6rem;
+      margin-left: 2rem;
+     
+     
+     }
+
+     /*
+     .footer-right div{
+    margin-right: 9rem;
+   }
+
+   .footer-right  .pollecode{
+    margin-top: 4rem;
+    margin-left: 1.5rem;
+    
+    
+   }
+     */
+
+     .teamsection{
+      height: 70rem;
+     }
+
+     .wrapImagesUp, .wrapImagesBottom {
+    
+      display: flex;
+      flex-wrap: wrap;
+     justify-content: space-around;
+     /* margin-bottom: 80px; */
+     }
+
+     .teamsection img{
+    
+      /* border-top-right-radius: 0;*/
+      width: 90%; 
+      
+    }
+
+     .wrapImagesUp section, .wrapImagesBottom section {
+    
+      flex-basis: 40%;
+      
+    }
+
+    .wrapImagesUp section #santos{
+      margin-top: 1.5rem;
+    }
+
+    .menuSpan{
+      margin-top: 20rem;
+    }
+
+    
+  
+     .gallery  img{
+      flex-basis: 49%;
+      
+    
+    }
+
+    .contact{
+      margin-top: 7rem;
+    }
+
+    .contact-P{
+      margin-top: 2.5rem;
+    }
+
+    .contact form{
+      margin: 1rem 3rem;
+    }
+
+  }
+
+  @media screen and (min-width: 769px) and (max-width : 1024px) {
+
+    .header ul li{
+      margin-top: 1rem;
+    }
+  
+
+  .specialOrder.last  .last{
+     margin-bottom: 1rem;
+     
+  }
+
+  .gallery  img{
+    flex-basis: 30%;
+  }
+
+    #cartContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 0.3rem;
+      border-radius: 5px;
+      background-image: url(./Images/yeahyeah.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 30rem;
+    
+    
+    }
+
+    #cartContent *{
+      font-size: small;
+    }
+
+   
+
+   
+
+     #forButton button{
+     margin-top: -2.5rem;
+ 
+  
+     
+     
+    }
+
+    #forButton button:active{
+      background-color: red;
+      
+     }
+
+     .pollecode{
+      margin-top: 5rem;
+     }
+
+     
+
+     
+  }
+  
+
+    
+
+
+
+ 
+    
+ 
+
+
+
+ 
+ 
+
+  

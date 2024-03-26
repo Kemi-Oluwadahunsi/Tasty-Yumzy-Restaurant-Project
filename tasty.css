@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 li {
@@ -24,7 +25,7 @@ a:hover {
 header {
   /* position: relative; */
   background-color: #eff7ff;
-  padding: 0 2rem;
+  padding: 0 6em;
   margin-top: 0;
 }
 
@@ -38,11 +39,9 @@ header {
 }
 
 .logo img {
- 
   border-top-left-radius: 40%;
   border-bottom-left-radius: 40%;
   border-top-right-radius: 60%;
-  
 }
 .navbar a {
   text-transform: uppercase;
@@ -61,19 +60,24 @@ header {
 }
 
 .links a:hover {
-  scale: 1.05 2s ease;
-  color: white;
-  padding: 3%;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+.links li:hover {
+  transform: scale(1.09);
+  animation: transform 0.05s ease;
 }
 
 .navbar .orderNow a:hover {
   color: #008000;
-  background: #eff7ff;
-  transform: scale(1.05) 2s ease;
+  background: #9eff90;
+  transform: scale(1.05) 0.5s ease;
 }
 
 .navbar .toggle_btn {
-  color: whitesmoke;
+  color: #eff7ff;
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -82,10 +86,10 @@ header {
 .links {
   display: flex;
   align-items: center;
-  gap: 2.5em;
+  justify-content: space-around;
+  height: 100%;
   width: 50%;
 }
-
 
 .mobileContainer {
   display: none;
@@ -137,8 +141,6 @@ header {
   text-align: center;
 }
 
-
-
 /*...........Styling for homepage slideshow*/
 
 /*----Styling for the sliding carousel------*/
@@ -156,7 +158,7 @@ main {
 /* Hide the images by default */
 .mySlides {
   display: none;
-  height: 40em;
+  height: 41em;
 }
 
 .mySlides img {
@@ -171,7 +173,7 @@ main {
   position: absolute;
   top: 40%;
   width: auto;
-  padding: .5em;
+  padding: 0.5em;
   color: green;
   font-weight: bold;
   font-size: 2em;
@@ -197,7 +199,6 @@ main {
 
 /* Caption text */
 .text {
-
   color: #eff7ff;
   font-size: 1.5em;
   position: absolute;
@@ -207,8 +208,8 @@ main {
 }
 
 .text span {
-  background-color:#0b5c0d;
- padding: .7em .9em;
+  background-color: #0b5c0d;
+  padding: 0.7em 0.9em;
   border-radius: 10px;
 }
 
@@ -262,7 +263,6 @@ main {
   display: flex;
   flex-direction: column;
   place-items: center;
-  text-align: center;
   margin: 0 auto;
   padding: 2em 0;
 }
@@ -278,13 +278,14 @@ main {
 .about h1 {
   font-size: 2em;
   color: #031629;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .about p {
   font-size: 1.2em;
-  line-height: 1.6;
+  line-height: 1.8;
   width: 60%;
-
+  text-align: center;
 }
 
 .aboutUs a {
@@ -302,29 +303,30 @@ main {
 .aboutUs a:hover {
   color: #eff7ff;
   background-image: linear-gradient(to right, #5fff50 0%, #076d08 100%);
-
 }
 
 .aboutUs a:active {
-  color:#eff7ff;
+  color: #eff7ff;
   background-color: olivedrab;
   border: 3px solid #eff7ff;
 }
 
 #homep {
-background-image: linear-gradient(to bottom, #ccffc4,  #b7e0ff );
-padding: 0 5em;
+  background-image: linear-gradient(to bottom, #ccffc4 20%, #b7e0ff 80%);
+  padding: 0 5em;
 }
 
 .specialOrder {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: center;
+  padding: 2em 0;
 }
 .specialOrder img {
   margin: 2rem 0;
   width: 40%;
   height: 40%;
+  border-radius: 5px;
 }
 
 .specialOrder div {
@@ -334,7 +336,7 @@ padding: 0 5em;
   border-radius: 1em;
   background-color: green;
   height: fit-content;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
 }
 
 .specialOrder h4 {
@@ -352,7 +354,7 @@ padding: 0 5em;
   hyphens: auto;
 }
 
- .inquiry {
+.inquiry {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,7 +384,6 @@ padding: 0 5em;
   width: 100%;
 }
 
-
 .click a {
   border-radius: 5px;
   padding: 2% 3%;
@@ -398,119 +399,167 @@ padding: 0 5em;
 
 footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
   background-color: #030e03;
-  /* gap: 20%; */
   color: white;
-  width: 100%;
+  /* height: 15em; */
   font: bold;
-  padding: 3.45rem 3.1rem 3.45rem 2rem;
-  margin-top: 1%;
+}
+
+.first-footer {
+  width: 100%;
+  padding: 2em 5em;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .footer-left {
-  flex-basis: 20%;
-  margin-right: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-links a {
-  font-size: 0.7rem;
-  color: white;
-  padding: 0.2% 1.5%;
-  /* margin: 2% 0;  */
+  font-size: 0.9em;
+  color: #eff7ff;
+}
+
+.footer-links a:hover {
+  color: #008000;
+  background-color: #eff7ff;
 }
 
 .footer-center {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 7%;
-  margin-right: 3.5rem;
+  gap: 2em;
 }
 
 .footer-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
 }
 
-.footer-right div {
+.addresses {
   display: flex;
-  gap: 1rem;
-  padding: 10%;
+  gap: 1em;
+  align-items: center;
 }
 
-.footer-right i:active {
-  background-color: olivedrab;
+.addresses a {
+  color: green;
+  font-style: italic;
+}
+
+.socials {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+  align-items: center;
 }
 
 .footer-right i:hover {
   color: white;
-  background-color: #031629;
+  background-color: #9eff90;
 }
 
 .footer-right i {
   background-color: white;
+  border-radius: 5px;
   color: #031629;
-  font-size: 1.25rem;
-  padding: 1rem;
+  font-size: 1.5em;
+  padding: 0.5em;
 }
 
-.footer-links a:hover {
-  color: #031629;
+/* .footer-right .pollecode:hover {
   background-color: white;
-}
-
-.footer-right .pollecode:hover {
-  color: #031629;
-  background-color: white;
-}
+} */
 
 .footerlogo img {
-  width: 20%;
   border-top-left-radius: 40%;
   border-bottom-left-radius: 40%;
   border-top-right-radius: 60%;
-  padding-top: 2%;
-  margin-bottom: 1%;
 }
 
-.footer-center .email #lastEmail {
-  color: green;
+footer .footer-company-name {
+  border-top: 1px solid white;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 2em 0;
+  letter-spacing: 2px;
+}
+
+footer .footer-company-name a {
+  color: #0690f1;
 }
 
 /*.......Styles for about-us Page..........*/
 
-.aboutUsPage {
-  max-width: 1200px;
+#mainMenu {
+  width: 100%;
+  height: 40em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
   margin: 0 auto;
-  margin-top: 3%;
-  /* height: 500px; */
+}
+.aboutUsPage {
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  height: 80%;
 }
 
 .aboutUsPage img {
-  width: 100%;
+  display: block;
+  width: 65%;
   height: 100%;
+  object-fit: cover;
+}
+
+.paragraph p {
+  width: 65%;
+  text-align: center;
+  line-height: 1.8;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .teamsection {
-  background-color: #031629;
+ background-image: linear-gradient(to bottom, #ccffc4 20%, #b7e0ff 80%);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 700px;
-  row-gap: 7%;
+  gap: 3em;
+  padding: 2em 0;
 }
 
 .teamsection h4 {
   width: 100%;
-  background-color: rgb(163, 42, 42);
+  background-color: #eff7ff;
   font-family: "Kaushan Script", cursive;
   font-size: 2rem;
-  padding: 0 10px;
+  padding: .2em 1em;
+  color: #008000;
 }
 
 .teamsection a {
@@ -520,38 +569,36 @@ footer {
 
 .teamsection div span {
   color: #031629;
-  background-color: white;
-  padding: 1% 10%;
+  background-color: #eff7ff;
+  padding: .3em 1em;
+  font-size: 1.2em;
 }
 
-.teamsection .team .wrapImagesUp section,
-.teamsection .team .wrapImagesBottom section {
+.teamsection .team .wrapImagesUp section {
   width: 15rem;
-  /* height: 15rem; */
 }
 
-.wrapImagesUp,
-.wrapImagesBottom {
+.wrapImagesUp {
   display: flex;
-  flex-direction: row;
-  column-gap: 5%;
+  gap: 4em;
+  padding: 0 5em;
 }
 
-.wrapImagesBottom {
-  margin-top: 5%;
+.staff a{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: .3em;
 }
 
 .role {
   display: flex;
   justify-content: center;
   margin-top: 1%;
-  background-color: rgb(163, 42, 42);
+  background-color: #076d08;
 }
 
 .role:hover {
-  background-color: #031629;
+  background-color: #eff7ff;
 }
 
 .role a {
@@ -560,15 +607,20 @@ footer {
   padding: 10px;
 }
 
+.role a:hover {
+  color: #076d08;
+}
+
 .person-info {
   display: none;
 }
 
 .teamsection img {
-  width: 100%;
-  height: 100%;
-  border: 5px solid white;
+  width: 15em;
+  height: 20em;
+  border: 5px solid #eff7ff;
   border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 /*........Styling the about  team pages........*/
@@ -579,18 +631,19 @@ section.teamMember {
   color: whitesmoke;
 }
 
-section.teamMember span {
+section .teamMember span {
   font-size: 3rem;
   font-family: "Kaushan Script", cursive;
   display: inline-block;
+  font-weight: 600;
 }
 
-section.teamMember p {
+section .teamMember p {
   line-height: 2;
   margin: 2rem 0;
 }
 
-section.teamMember a {
+section .teamMember a {
   background-color: white;
   color: #031629;
   padding: 7px 40px;
@@ -608,6 +661,7 @@ section.teamMember a {
 .ourgallery {
   font-size: 3rem;
   font-family: "Kaushan Script", cursive;
+  padding-top: .5em;
 }
 
 .gallery {

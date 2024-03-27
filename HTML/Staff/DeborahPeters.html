@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Deborah Peters</title>
+    <script src="https://kit.fontawesome.com/56e3e27d55.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/TastyYumZieWebAppCodes/tasty.css">
+</head>
+
+<body>
+   <header class="header">
+      <section class="navbar">
+        <div class="logo">
+          <a href="../../../index.html"><img src="../../Images/cover.png" alt="" /></a>
+        </div>
+
+        <ul class="links">
+          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../aboutUs.html">About</a></li>
+          <li><a href="../menu.html">MENUS</a></li>
+          <li><a href="../gallery.html">gallery</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <li class="orderNow"><a>Order Now</a></li>
+        <div class="toggle_btn"><i class="fas fa-bars"></i></div>
+      </section>
+      <section class="mobileContainer">
+        <ul id="mobile">
+          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../aboutUs.html">About</a></li>
+          <li><a href="../menu.html">MENUS</a></li>
+          <li><a href="../gallery.html">gallery</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="orderNow"><a>Order Now</a></li>
+        </ul>
+      </section>
+    </header>
+    <section class="teamMember">
+        <span class="staff-title">Deborah Peters</span>
+        <p>
+            Deborah Peters is a co-founder and partner of Tasty Yumzie Food Restaurant, a culinary venture she started with a vision to provide a unique dining experience that combines exceptional food, warm hospitality, and an inviting atmosphere. With a background in business and a passion for the food industry, Deborah brings a wealth of experience and knowledge to the restaurant.
+
+        </p>
+            
+        <p>
+            As a partner, Deborah oversees the strategic direction of the restaurant, working closely with the management team to ensure that Tasty Yumzie Food Restaurant is always moving forward and growing. She is also responsible for building relationships with suppliers, investors, and other stakeholders, and is committed to ensuring that the restaurant is a positive force in the local community.
+            
+        </p>
+
+         <p>
+            Deborah is dedicated to providing exceptional customer service, and she works closely with the front-of-house team to ensure that every guest feels welcome and satisfied. She understands the importance of creating a welcoming and inclusive environment, and she is committed to ensuring that Tasty Yumzie Food Restaurant is a place where everyone feels at home.
+            
+            Deborah's passion for the food industry and her commitment to quality are evident in every aspect of Tasty Yumzie Food Restaurant. Her vision and leadership have helped to create a unique and vibrant dining destination that is loved by locals and visitors alike.
+         </p>
+         <a href="../aboutUs.html#deborah">Back</a>
+</section>
+<footer>
+      <div class="first-footer">
+        <section class="footer-left">
+          <div>
+            <a class="logo" href="../../../index.html"
+              ><img src="../../Images/cover.png" alt=""
+            /></a>
+          </div>
+          <section class="footer-links">
+            <a href="../../../index.html" class="link-1">Home</a>
+            <a href="../aboutUs.html">About</a>
+            <a href="../menu.html">Menus</a>
+            <a href="../gallery.html">Gallery</a>
+            <a href="../contactUs.html">Contact</a>
+          </section>
+        </section>
+
+        <section class="footer-center">
+          <div class="addresses">
+            <i class="fa-solid fa-location-dot"></i>
+            <address>124 Sodimu layout, Allen Avenue, Lagos State.</address>
+          </div>
+
+          <div class="addresses">
+            <i class="fa-solid fa-phone"></i>
+            <span>+2348000040000</span>
+          </div>
+
+          <div class="addresses">
+            <i class="fa fa-envelope"></i>
+            <a
+              class="email"
+              href="mailto:support@tastyyumzie.com"
+              id="lastEmail"
+            >
+              support@tastyyumzie.com
+            </a>
+            
+          </div>
+
+          <div class="addresses">
+            <i class="fa-solid fa-clipboard-question"></i>
+            <a href="./TastyYumZieWebAppCodes/HTML/contact.html">Inquiry</a>
+          </div>
+
+          <div class="addresses">
+            <i class="fa-solid fa-receipt"></i>
+            <a href="#" id="reservation">Reservation</a>
+          </div>
+        </section>
+
+        <section class="footer-right">
+          <div class="socials">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-whatsapp"></i></a>
+          </div>
+        </section>
+      </div>
+
+      <span class="footer-company-name">Developed by <a href="https://kodemaven-portfolio.vercel.app">KodeMaven</a>. All rights reserved ©2024</span>
+    </footer>
+
+    <section id="cartContainer">
+      <section id="cartSplitting">
+        <section id="cartContent">
+          <div class="cartSelection">
+            <h1>ONLINE ORDER CART</h1>
+
+            <!-- Time of the day selection -->
+
+            <section class="label">
+              <label for="time">Select meal:</label>
+              <select id="time" onchange="showMeals()">
+                <option value="choose">Choose Meal Type</option>
+                <option value="brunch">Brunch</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="wines&Cocktails">Wines&Cocktails</option>
+                <option value="desserts">Desserts</option>
+              </select>
+            </section>
+          </div>
+
+          <!-- Meal selection based on time of the day -->
+
+          <!----  for brunch----->
+
+          <div id="menu">
+            <ul id="brunch-meals" style="display: none">
+              <li>
+                <span class="mealName">Eggs Benedict</span>
+                <img
+                  src="../Images/eggs-benedict.jpg"
+                  alt=""
+                />
+                <span>$4.30</span>
+                <input type="number" id="meal1" value="0" />
+              </li>
+              <li>
+                <span class="mealName">Avocado Toast</span>
+                <img
+                  src="../Images/avocado-toast.jpg"
+                  alt=""
+                />
+                <span>$4.70</span>
+                <input type="number" id="meal2" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Breakfast Burritott</span>
+                <img
+                  src="../Images/Breakfast-Burritos.jpg"
+                  alt=""
+                />
+                <span>$5.30</span>
+                <input type="number" id="meal3" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Buttermilk Pancake</span>
+                <img
+                  src="../Images/tastyBackgroundPics.jpg"
+                  alt=""
+                />
+                <span>$4.50</span>
+                <input type="number" id="meal4" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Chicken and Waffles</span>
+                <img
+                  src="../Images/chicken-waffles.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal5" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Smoked Salmon Bagelt</span>
+                <img
+                  src="../Images/Smoked-Salmon.png"
+                  alt=""
+                />
+                <span>$5.20</span>
+                <input type="number" id="meal6" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Belgian Waffles</span>
+                <img
+                  src="../Images/belgian-waffles.jpeg"
+                  alt=""
+                />
+                <span>$3.60</span>
+                <input type="number" id="meal7" value="0" />
+              </li>
+            </ul>
+
+            <!----  for lunch----->
+
+            <ul id="lunch-meals" style="display: none">
+              <li>
+                <span class="mealName">Hamburger</span>
+                <img
+                  src="../Images/hamburger.jpg"
+                  alt=""
+                />
+                <span>$4.30</span>
+                <input type="number" id="meal8" value="0" />
+              </li>
+              <li>
+                <span class="mealName">Club Sandwich</span>
+                <img
+                  src="../Images/club-sandwich.jpg"
+                  alt=""
+                />
+                <span>$5.60</span>
+                <input type="number" id="meal9" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Caprese Panini</span>
+                <img
+                  src="../Images/caprese-panini.jpg"
+                  alt=""
+                />
+                <span>$5.80</span>
+                <input type="number" id="meal10" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">BBQ Ribs</span>
+                <img src="../Images/bbq-ribs.jpg" alt="" />
+                <span>$6.30</span>
+                <input type="number" id="meal11" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Caesar Salad</span>
+                <img
+                  src="../Images/Caesar-Salad.jpg"
+                  alt=""
+                />
+                <span>$5.50</span>
+                <input type="number" id="meal12" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Fish Tacos</span>
+                <img
+                  src="../Images/fish-tacos.jpeg"
+                  alt=""
+                />
+                <span>$5.20</span>
+                <input type="number" id="meal13" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Chicken Caesar Wrap</span>
+                <img
+                  src="../Images/Chicken-Caesar-Wraps.jpg"
+                  alt=""
+                />
+                <span>$3.80</span>
+                <input type="number" id="meal14" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Cobb Salad</span>
+                <img
+                  src="../Images/cobb-salad.jpg"
+                  alt=""
+                />
+                <span>$6.20</span>
+                <input type="number" id="meal15" value="0" />
+              </li>
+            </ul>
+
+            <!-- for dinner-->
+            <ul id="dinner-meals" style="display: none">
+              <li>
+                <span class="mealName">Steakhouse Steak</span>
+                <img
+                  src="../Images/Steak-Houses.jpg"
+                  alt=""
+                />
+                <span>$7.20</span>
+                <input type="number" id="meal16" value="0" />
+              </li>
+              <li>
+                <span class="mealName">Pasta Carbonara</span>
+                <img
+                  src="../Images/Spaghetti-Carbonara.jpg"
+                  alt=""
+                />
+                <span>$6.00</span>
+                <input type="number" id="meal17" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Chicken Parmesan</span>
+                <img
+                  src="../Images/Chicken-Parmesan.jpg"
+                  alt=""
+                />
+                <span>$4.75</span>
+                <input type="number" id="meal18" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Tacos Al Pastor</span>
+                <img
+                  src="../Images/al-pastor.jpg"
+                  alt=""
+                />
+                <span>$3.50</span>
+                <input type="number" id="meal19" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Lobster Roll</span>
+                <img
+                  src="../Images/lobster-roll.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal20" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Sushi Platter</span>
+                <img
+                  src="../Images/sushi-platter.jpg"
+                  alt=""
+                />
+                <span>$5.25</span>
+                <input type="number" id="meal21" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Shrimp Scamp</span>
+                <img
+                  src="../Images/Shrimp-Scampi.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal22" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Grilled Salmon</span>
+                <img
+                  src="../Images/grilled-salmon.jpg"
+                  alt=""
+                />
+                <span>$5.25</span>
+                <input type="number" id="meal23" value="0" />
+              </li>
+            </ul>
+
+            <!--for wines and Cocktails-->
+
+            <ul
+              id="wines&Cocktails-meals"
+              class="wines-cocktails"
+              style="display: none"
+            >
+              <li>
+                <span class="mealName">Cabernet Sauvignon</span>
+                <img
+                  src="../Images/cabernet-sauvignon.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal24" value="0" />
+              </li>
+              <li>
+                <span class="mealName">Sauvignon Blanc</span>
+                <img
+                  src="../Images/sauvignon-blanc.jpg"
+                  alt=""
+                />
+                <span>$5.55</span>
+                <input type="number" id="meal25" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Mojito</span>
+                <img
+                  src="../Images/mojito-cocktails.jpg"
+                  alt=""
+                />
+                <span>$6.25</span>
+                <input type="number" id="meal26" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Chardonnay</span>
+                <img
+                  src="../Images/bottle-white-wine-glass-.jpg"
+                  alt=""
+                />
+                <span>$3.65</span>
+                <input type="number" id="meal27" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Margarita</span>
+                <img
+                  src="../Images/The-Best-Margarita.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal28" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Manhattan</span>
+                <img
+                  src="../Images/manhantan.jpg"
+                  alt=""
+                />
+                <span>$4.50</span>
+                <input type="number" id="meal29" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Merlot</span>
+                <img src="../Images/merlot.jpg" alt="" />
+                <span>$5.00</span>
+                <input type="number" id="meal30" value="0" />
+              </li>
+            </ul>
+
+            <!---for Desserts-->
+            <ul id="desserts-meals" style="display: none">
+              <li>
+                <span class="mealName">Apple Pie</span>
+                <img
+                  src="../Images/apple-pie.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal31" value="0" />
+              </li>
+              <li>
+                <span class="mealName">Chocolate Lava Cake</span>
+                <img
+                  src="../Images/chocolate-lava-cake.jpg"
+                  alt=""
+                />
+                <span>$5.00</span>
+                <input type="number" id="meal32" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">New York Cheesecake</span>
+                <img
+                  src="../Images/cheese-cake.jpg"
+                  alt=""
+                />
+                <span>$4.50</span>
+                <input type="number" id="meal33" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Crème Brûlée</span>
+                <img
+                  src="../Images/creme-brulee.jpg"
+                  alt=""
+                />
+                <span>$5.25</span>
+                <input type="number" id="meal34" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Key Lime Pie</span>
+                <img
+                  src="../Images/Key-Lime-Pie.jpg"
+                  alt=""
+                />
+                <span>$4.75</span>
+                <input type="number" id="meal35" value="0" />
+              </li>
+
+              <li>
+                <span class="mealName">Brownie Sundae</span>
+                <img
+                  src="../Images/brownie-sundae.jpg"
+                  alt=""
+                />
+                <span>$4.00</span>
+                <input type="number" id="meal36" value="0" />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Calculate total and checkout -->
+
+        <section class="button-price">
+          <section id="forButton">
+            <button class="orderButton" onclick="calculateTotal()">
+              Make Order
+            </button>
+          </section>
+          <p id="total"></p>
+
+          <!-- Cart items and other details go here -->
+        </section>
+      </section>
+      <span id="closeCart"><i class="fas fa-times"></i></span>
+    </section>
+</body>
+</html>

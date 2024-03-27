@@ -50,6 +50,10 @@ header {
   font-size: 1rem;
 }
 
+.navbar button {
+  border: none;
+}
+
 .navbar .orderNow a {
   background-color: olivedrab;
   color: white;
@@ -162,8 +166,11 @@ main {
 }
 
 .mySlides img {
+  display: block;
   height: 100%;
   width: 100%;
+  object-fit: cover;
+/* margin-left: 5em; */
 }
 
 /* Next & previous buttons */
@@ -216,7 +223,7 @@ main {
 /* Number text (1/4etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 1.3em;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -524,7 +531,7 @@ footer .footer-company-name a {
 .aboutUsPage {
   width: 100%;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   height: 80%;
 }
@@ -544,7 +551,7 @@ footer .footer-company-name a {
 }
 
 .teamsection {
- background-image: linear-gradient(to bottom, #ccffc4 20%, #b7e0ff 80%);
+  background-image: linear-gradient(to bottom, #ccffc4 20%, #b7e0ff 80%);
   color: white;
   display: flex;
   flex-direction: column;
@@ -558,7 +565,7 @@ footer .footer-company-name a {
   background-color: #eff7ff;
   font-family: "Kaushan Script", cursive;
   font-size: 2rem;
-  padding: .2em 1em;
+  padding: 0.2em 1em;
   color: #008000;
 }
 
@@ -570,7 +577,7 @@ footer .footer-company-name a {
 .teamsection div span {
   color: #031629;
   background-color: #eff7ff;
-  padding: .3em 1em;
+  padding: 0.3em 1em;
   font-size: 1.2em;
 }
 
@@ -584,10 +591,10 @@ footer .footer-company-name a {
   padding: 0 5em;
 }
 
-.staff a{
+.staff a {
   display: flex;
   flex-direction: column;
-  gap: .3em;
+  gap: 0.3em;
 }
 
 .role {
@@ -624,11 +631,23 @@ footer .footer-company-name a {
 }
 
 /*........Styling the about  team pages........*/
+
+.staff-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 section.teamMember {
-  padding: 1rem 5rem;
-  text-align: center;
-  background-color: #031629;
-  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+  align-items: center;
+  padding: 0 5em 2em 5em;
+  text-align: justify;
+  color: #031629;
+  height: 40em;
 }
 
 section .teamMember span {
@@ -638,17 +657,23 @@ section .teamMember span {
   font-weight: 600;
 }
 
-section .teamMember p {
-  line-height: 2;
-  margin: 2rem 0;
+section.teamMember p {
+  line-height: 1.5;
+  width: 70%;
 }
 
-section .teamMember a {
+section.teamMember a {
   background-color: white;
   color: #031629;
   padding: 7px 40px;
   font-weight: 700;
+  border: 1px solid #008000;
   border-radius: 15px;
+}
+
+section.teamMember a:hover {
+  color: #eff7ff;
+  background-color: #008000;
 }
 
 /*............Styling for our gallery page........*/
@@ -661,7 +686,7 @@ section .teamMember a {
 .ourgallery {
   font-size: 3rem;
   font-family: "Kaushan Script", cursive;
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
 .gallery {
@@ -670,14 +695,15 @@ section .teamMember a {
   flex-wrap: wrap;
   /* flex-direction: column; */
   justify-content: space-around;
-  gap: 10px;
+  gap: 2em;
 }
 
 .gallery img {
-  flex-basis: 20%;
-  width: 20%;
-  height: 30%;
+  /* flex-basis: 30%; */
+  width: 30em;
+  height: 18em;
   flex-grow: 2;
+  object-fit: cover;
 }
 
 .gall a {
@@ -699,19 +725,33 @@ section .teamMember a {
 
 #menuMain {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
 }
 
 #menuMain h4 {
   text-align: center;
 }
-
-.menuSpan {
-  margin-top: 8%;
+.menuImage {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.menuSpan span {
-  cursor: pointer;
+.menuImage img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.menuSpan {
+  margin-top: 2em;
+  text-align: center;
 }
 
 .menuSpan span {
@@ -719,11 +759,14 @@ section .teamMember a {
   display: inline-block;
   margin: 2% 1%;
   padding: 10px 30px;
-  background-color: #031629;
+  background-color: #076d08;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .menuSpan span:hover {
-  background-color: olivedrab;
+  background-color: #00b800;
+  color: #030e03;
 }
 
 .menuSpan span.default-color {
@@ -731,24 +774,38 @@ section .teamMember a {
 }
 
 .menuSpan .default-color:hover {
-  background-color: #031629;
+  background-color: #00b800;
 }
 
 .mealOfTheDay {
   color: #031629;
 }
 
+.each-food {
+  display: flex;
+  justify-content: space-around;
+  gap: 3em;
+  flex-wrap: wrap;
+  padding: 2em 5em;
+}
+
 .mealOfTheDay .mealName {
   text-align: center;
   border-bottom: 5px solid olivedrab;
-  margin-bottom: 1rem;
+  padding: 2em 0;
+  font-size: 2em;
 }
 
-.meals section {
+.food-images {
   display: flex;
-  justify-content: space-around;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 0;
+  border-radius: 3px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.5em olivedrab);
 }
 
 .meals section section {
@@ -756,14 +813,22 @@ section .teamMember a {
   background-color: olivedrab;
 }
 
+.meals section img {
+  width: 25em;
+  height: 15em;
+  object-fit: cover;
+}
+
 .meals section section h3 {
+  font-size: 1.5em;
   text-align: center;
-  padding: 10px 0 0 0;
 }
 
 .meals section section p {
   text-align: center;
-  padding: 5px 20px;
+  line-height: 1.6;
+  width: 80%;
+  font-size: 1.1em;
 }
 
 .hide {
@@ -772,11 +837,11 @@ section .teamMember a {
 
 /* styles.css for cart */
 #cartContainer {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50em;
   background-color: olivedrab;
   display: none;
   z-index: 9999;
@@ -792,33 +857,49 @@ section .teamMember a {
   /* z-index: 9999; */
 }
 
-#cartContent {
-  position: absolute;
-  top: 50%;
+#cartSplitting {
+  display: flex;
+  gap: 2em;
+  position: relative;
+  top: 40%;
   left: 50%;
+  width: 80%;
+  height: 40em;
   transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1.25rem;
+  padding: 1.25em;
   border-radius: 5px;
   background-image: url(./Images/yeahyeah.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+#cartContent {
+  width: 75%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
 #cartContainer-onPhone #cartContent {
-  position: relative;
+  position: absolute;
   width: 80%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  /* background-color: white; */
   margin: -0.5rem 1rem 1.5rem 0;
-  background-image: url(./Images/yeahyeah.jpg);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7),
+    url(./Images/yeahyeah.jpg)
+  );
   background-size: contain;
   background-repeat: no-repeat;
-  height: 30rem;
+  height: 20rem;
 }
 
 #cartContainer-onPhone #cartContent h1 {
-  background-color: white;
+  background-color: #eff7ff;
   margin-bottom: 0.2rem;
 }
 
@@ -827,16 +908,31 @@ section .teamMember a {
   padding: 0.1rem 0.5rem;
 }
 
+.cartSelection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-content: center;
+  z-index: 999;
+  background: #eff7ff;
+  color: #003404;
+  width: 50%;
+  margin: 0 auto 0 auto;
+  border-radius: 5px;
+  padding: 2em;
+}
+
+.label {
+  text-align: center;
+}
+
 .orderpage #menu {
   font-size: small;
 }
 
-.orderpage #forButton {
-  margin-top: -2.7rem;
-}
-
 .orderpage #forButton button {
-  font-size: small;
+  font-size: 1.5em;
 }
 
 .orderpage #menu li {
@@ -851,13 +947,13 @@ section .teamMember a {
 
 #closeCart {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1em;
+  right: 10em;
   cursor: pointer;
-  color: white;
-  font-size: large;
-  border: 1px solid #031629;
-  padding: 8px;
+  color: #003404;
+  background: #eff7ff;
+  border-radius: 10px;
+  padding: 0.3em 0.6em;
 }
 
 #OrdercloseCart {
@@ -869,6 +965,11 @@ section .teamMember a {
   font-size: large;
   border: 1px solid #031629;
   padding: 8px;
+}
+
+#closeCart i {
+  border: none;
+  font-size: 1.2em;
 }
 
 #closeMobile {
@@ -883,29 +984,31 @@ section .teamMember a {
 }
 
 /*style for cart*/
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 20px; 
-}  */
 
 h1 {
-  color: black;
+  color: #003404;
   text-align: center;
+  font-size: 1.5em;
 }
 
 #menu {
-  height: 22rem;
-  width: 30rem;
+  height: 5em;
 }
 
-.label {
-  text-align: center;
+#brunch-meals,
+#lunch-meals,
+#dinner-meals,
+.wines-cocktails,
+#desserts-meals {
+  background: #eff7ff;
+  padding: 2em 1em;
+  height: 33em;
 }
 
 label {
   font-weight: bold;
   text-align: center;
-  color: white;
+  font-size: 1.5em;
 }
 
 select {
@@ -926,40 +1029,87 @@ ul {
 }
 
 li .mealName {
-  flex-basis: 40%;
+  flex-basis: 30%;
+  font-weight: bold;
 }
 
 li img {
-  width: 10%;
-  height: 10%;
+  flex-basis: 10%;
+  width: 3em;
+  height: 3em;
   border-radius: 10px;
+}
+
+#brunch-meals > span + span,
+#lunch-meals > span + span,
+#dinner-meals > span + span,
+.wines-cocktails > span + span,
+#desserts-meals > span + span {
+  font-size: 1.1em;
+  font-weight: bolder;
 }
 
 li input {
   width: 3rem;
   flex-basis: 5%;
+  font-size: 1.1em;
+  padding-left: 0.2em;
 }
 
 #forButton {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
 }
 
-button {
-  background-color: #031629;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+.orderButton {
+  background-color: #008000;
+  color: #eff7ff;
+  padding: 0.8em 1em;
+  font-size: 1.2em;
   border: none;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 5px;
+  display: flex;
+
+  justify-content: end;
+}
+
+.button-price {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: end;
+}
+
+.calculateTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eff7ff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.calculate {
+ background-color: #008000;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
+.calculate:hover {
+ background: #eff7ff;
+ color: #008000;
 }
 
 #total {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
+  margin-top: 1.5em;
+
+  text-align: center;
 }
 
 .alert {
@@ -971,16 +1121,25 @@ button {
 
 /*--contact page css--*/
 
+.contact {
+  padding: 0 0 3em 0;
+}
 .contact-P {
   margin: 1rem auto;
-  width: 70%;
-  text-align: justify;
+  width: 50%;
+  text-align: center;
   line-height: 1.5;
 }
-form {
-  max-width: 25rem;
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
   margin: 0 auto;
-  height: 25rem;
+  padding: 2em 3em;
+  /* border: 1px solid #008000; */
+  border-radius: 10px;
+  background: #eff7ff;
+  filter: drop-shadow(0 0 15px #9eff90);
 }
 
 input[type="text"],
@@ -991,19 +1150,35 @@ textarea {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  outline: none;
 }
 
-input[type="submit"] {
+#contact-form button {
   background-color: #4caf50;
-  color: white;
+  color: #eff7ff;
   border: none;
-  padding: 10px 20px;
+  padding: 0.5em;
   cursor: pointer;
   border-radius: 4px;
+  margin-top: 0.5em;
+  font-size: 1.2em;
+  width: 50%;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.1em;
+}
+
+#contact-form .submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-form button:hover {
+  background-color: #39c43f;
 }
 
 /*-------Reservation form---------*/
@@ -1016,34 +1191,59 @@ input[type="submit"]:hover {
   border-radius: 4px;
 }
 
+.reservation-body {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
 #reservation-form {
   position: fixed;
   display: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 15%;
+  left: 35%;
+  width: 30%;
+  background-color: #008000;
 
   z-index: 9999;
-  /* max-width: 400px; */
-  background-color: #031629;
   padding: 20px;
   border-radius: 4px;
 }
 
-#close-button {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: large;
-  font-weight: bold;
-  color: white;
-  padding: 8px;
-  border: 1px solid olivedrab;
+.reservation-formy {
+  display: flex;
+  flex-direction: column;
+  gap: em;
 }
 
-form label {
+.reserve {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  width: 100%;
+  align-items: start;
+}
+
+#close-button {
+  position: fixed;
+  top: 10%;
+  right: 32%;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #008000;
+  padding: 0.5em 1em;
+  border: 1px solid olivedrab;
+  border-radius: 5px;
+  background-color: #eff7ff;
+}
+
+.click {
+  margin-top: 2em;
+}
+
+#contact-form label {
   margin-top: 20px;
 }
 
@@ -1062,8 +1262,16 @@ form input[type="number"] {
   border-radius: 4px;
 }
 
-form input[type="submit"] {
-  background-color: #4caf50;
+.submitForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.submitForm button {
+  background-color: #003404;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1071,7 +1279,7 @@ form input[type="submit"] {
   border-radius: 4px;
 }
 
-form input[type="submit"]:hover {
+.submitForm button:hover {
   background-color: #45a049;
 }
 
@@ -1461,7 +1669,6 @@ form input[type="submit"]:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
     padding: 0.3rem;
     border-radius: 5px;
     background-image: url(./Images/yeahyeah.jpg);

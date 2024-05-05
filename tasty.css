@@ -1226,21 +1226,13 @@ textarea::placeholder {
   border-radius: 4px;
 }
 
-.reservation-body {
-  background: #000;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-}
-
 #reservation-form {
   position: fixed;
   display: none;
-  top: 15%;
+  top: 23%;
   left: 35%;
   width: 30%;
   background-color: #008000;
-
   z-index: 9999;
   padding: 20px;
   border-radius: 4px;
@@ -1249,7 +1241,20 @@ textarea::placeholder {
 .reservation-formy {
   display: flex;
   flex-direction: column;
-  gap: em;
+}
+
+.reservation-formy label {
+  color: #eff7ff;
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#date {
+  padding: 0.5em;
+  width: 100%;
+  font-size: 1.2em;
+  border-radius: 4px;
 }
 
 .reserve {
@@ -1262,14 +1267,14 @@ textarea::placeholder {
 
 #close-button {
   position: fixed;
-  top: 10%;
-  right: 32%;
+  top: 20%;
+  right: 35%;
   cursor: pointer;
   font-size: 1.5em;
   font-weight: bold;
   color: #008000;
-  padding: 0.5em 1em;
-  border: 1px solid olivedrab;
+  padding: 0.2em 0.5em;
+  border: none;
   border-radius: 5px;
   background-color: #eff7ff;
 }
@@ -1295,6 +1300,7 @@ form input[type="number"] {
   margin-bottom: 40px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  outline: #008000;
 }
 
 .submitForm {
@@ -1312,6 +1318,7 @@ form input[type="number"] {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
+  font-size: 1.2em;
 }
 
 .submitForm button:hover {
@@ -1896,6 +1903,32 @@ section.cashOnDeliveryForm {
   .selection {
     font-size: 0.9em;
   }
+
+   #reservation-form{
+    width: 80%;
+    top: 15%;
+    left: 10%;
+  }
+
+  .reservation-formy label {
+    font-size: 1em;
+  }
+
+  form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  margin-bottom: 20px;
+}
+
+  #close-button {
+    top: 13%;
+    right: 10%;
+    font-size: 1.1em;
+  }
+
+  .submitForm button {
+    font-size: 0.9em;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -2198,6 +2231,32 @@ section.cashOnDeliveryForm {
     justify-content: space-between;
     padding: 1em;
   }
+
+  #reservation-form{
+    width: 50%;
+    top: 15%;
+    left: 25%;
+  }
+
+  .reservation-formy label {
+    font-size: 1em;
+  }
+
+  form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  margin-bottom: 20px;
+}
+
+  #close-button {
+    top: 13%;
+    right: 25%;
+    font-size: 1.1em;
+  }
+
+  .submitForm button {
+    font-size: 1em;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
@@ -2363,5 +2422,16 @@ section.cashOnDeliveryForm {
 
   #closeCashOnDeliveryForm {
     top: 0;
+  }
+
+  #reservation-form{
+    width: 50%;
+    top: 19%;
+    left: 25%;
+  }
+
+  #close-button {
+    top: 17%;
+    right: 25%;
   }
 }

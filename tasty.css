@@ -1713,6 +1713,19 @@ section.cashOnDeliveryForm {
     margin: 0 auto;
   }
 
+  .wrapImagesUp {
+    padding: 0;
+  }
+
+  section.teamMember {
+    height: auto;
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  section.teamMember p {
+    width: 100%;
+  }
+
   .meals section {
     flex-direction: column;
     gap: 10px;

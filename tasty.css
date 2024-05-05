@@ -104,7 +104,7 @@ header {
   background-color: rgba(255, 255, 255, 0.95);
   text-transform: uppercase;
   position: fixed;
-  top: 1.5rem;
+  top: 5rem;
   left: 0;
   width: 60%;
   height: 100%;
@@ -137,14 +137,6 @@ header {
   color: white;
 }
 
-#mobile .orderNow a {
-  background-color: olivedrab;
-  color: white;
-  width: 10rem;
-  padding: 0.5% 0 0.5% 0;
-  text-align: center;
-}
-
 /*...........Styling for homepage slideshow*/
 
 /*----Styling for the sliding carousel------*/
@@ -159,7 +151,6 @@ main {
   margin: 0 auto;
 }
 
-/* .aboutUsPage   */
 
 /* Hide the images by default */
 .mySlides {
@@ -172,7 +163,7 @@ main {
   height: 100%;
   width: 100%;
   object-fit: cover;
-/* margin-left: 5em; */
+  /* margin-left: 5em; */
 }
 
 /* Next & previous buttons */
@@ -273,7 +264,21 @@ main {
   flex-direction: column;
   place-items: center;
   margin: 0 auto;
-  padding: 2em 0;
+  padding-bottom: 2em;
+}
+
+.aboutUs h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.5rem;
+  color: green;
+  padding: 1em 0;
+}
+
+.aboutUs p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  padding: 1em 0;
 }
 
 .about {
@@ -293,12 +298,12 @@ main {
 .about p {
   font-size: 1.2em;
   line-height: 1.8;
-  width: 60%;
+  padding: 0 10em;
   text-align: center;
 }
 
 .aboutUs a {
-  font-size: 1.2em;
+  font-size: 1em;
   display: inline-block;
   margin: 2rem 1rem 0 2rem;
   border: 3px solid #076d08;
@@ -322,7 +327,6 @@ main {
 
 #homep {
   background-image: linear-gradient(to bottom, #ccffc4 20%, #b7e0ff 80%);
-  padding: 0 5em;
 }
 
 .specialOrder {
@@ -340,7 +344,7 @@ main {
 
 .specialOrder div {
   color: #eff7ff;
-  width: 30em;
+  width: 40%;
   border: 2px solid #eff7ff;
   border-radius: 1em;
   background-color: green;
@@ -361,6 +365,15 @@ main {
   line-height: 1.5;
   text-align: justify;
   hyphens: auto;
+}
+
+section.last {
+  padding: 0 2rem;
+}
+
+#buffet {
+  width: 90%;
+  height: 80%;
 }
 
 .inquiry {
@@ -1060,9 +1073,13 @@ li input {
 
 #forButton {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
+  /* position: relative; */
+  width: 100%;
 }
 
 .orderButton {
@@ -1087,30 +1104,46 @@ li input {
 }
 
 .calculateTotal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  justify-items: center;
   color: #eff7ff;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.calculate {
- background-color: #008000;
+
+.selectedItems {
+  background: #eff7ff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
   border-radius: 10px;
-  cursor: pointer;
-  padding: 0.5em 1em;
 }
 
-.calculate:hover {
- background: #eff7ff;
- color: #008000;
+.selectedItems p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#selectedItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#selectedItems li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#selectedItems li .mealName {
+  flex-basis: 30%;
+  font-weight: bold;
 }
 
 #total {
-  margin-top: 1.5em;
-
   text-align: center;
 }
 
@@ -1295,6 +1328,107 @@ form input[type="number"] {
   margin-top: 1rem;
 }
 
+/*.................Styles for Payment Forms..................*/
+
+#paymentOptions {
+  width: 100%;
+  padding: 2.2em 1rem 0 1rem;
+  background: #eff7ff;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+#paymentOptions button {
+  border: none;
+  color: #008000;
+  padding: 0.5em 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+#paypal-button-container {
+  margin-top: 0.5em;
+}
+
+#paymentOptions button:hover {
+  background: #008000;
+  color: #eff7ff;
+}
+
+#cashOnDeliveryBtn {
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2em 0;
+}
+
+#cashOnDeliveryForm {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em 2em 2em;
+  border-radius: 10px;
+  background: #eff7ff;
+  filter: drop-shadow(0 0 15px rgb(5, 37, 37));
+}
+
+section.cashOnDeliveryForm {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: -50%, -50%;
+}
+
+#cashOnDeliveryForm button > i {
+  color: #003404;
+  font-size: 1.2em;
+  border: none;
+}
+
+#closeCashOnDeliveryForm {
+  font-size: 25px;
+  position: relative;
+  left: 95%;
+  top: -1rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+#cashOnDeliveryForm label {
+  font-size: 1em;
+}
+
+#cashOnDeliveryDetailsForm {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cashOnDeliveryDetails .phoneNumber {
+  padding: 0.5em;
+  width: 100%;
+}
+
+#cashOnDeliveryForm .confirmOrder {
+  background-color: #008000;
+  color: #eff7ff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 2em;
+  font-size: 1.1em;
+}
+
+#cashOnDeliveryForm .submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*.................Styles for media queries..................*/
 
 /* CSS rules for touch events on mobile devices */
@@ -1302,32 +1436,60 @@ form input[type="number"] {
 @media screen and (max-width: 480px) {
   #cartContent {
     position: relative;
+    width: 100%;
   }
 
   header {
+    display: flex;
+    justify-content: space-between;
     top: 0;
-    position: fixed;
-    z-index: 999;
-    height: 5rem;
+    padding: 0 1em;
+    /* position: fixed;
+    z-index: 999; */
+    width: 100%;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+    font-size: 1.7rem;
+    color: #003404;
+  }
+
+  .toggle_btn i.fa-bars {
+    font-size: 1.7rem;
+  }
+
+  .toggle_btn i.fa-times {
+    font-size: 1.7rem;
+    border: none;
+  }
+
+  .navbar .links.action_btn {
+    display: flex;
+  }
+
+  .links {
+    display: none;
   }
 
   .logo {
     margin-top: 1rem;
-    height: 2.5rem;
   }
 
   .logo img {
     margin-top: -0.7rem;
-    width: 29%;
+    width: 80%;
+  }
+
+  .navbar .orderNow a {
+    padding: 1em;
+    font-size: 1em;
+    width: 7rem;
   }
 
   h4 {
     font-size: 1rem;
     margin-top: 20px;
-  }
-
-  main {
-    margin-top: 6rem;
   }
 
   * {
@@ -1343,20 +1505,38 @@ form input[type="number"] {
   }
 
   .slideshow-container {
-    position: relative;
-    margin: 1rem 1rem 0 1rem;
-    height: 17rem;
+    margin: 0;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0;
+  }
+
+  .numbertext {
+    font-size: 0.9rem;
   }
 
   #menuMain {
     /* max-width: 500px; */
     position: relative;
-    margin: 6rem 1rem 0 1rem;
+    padding: 0 1rem;
     height: 17rem;
   }
 
+  .aboutUsPage img {
+    width: 100%;
+  }
+
+  .paragraph p {
+    width: 90%;
+    text-align: justify;
+    font-size: 0.9em;
+  }
+
   #menuMain h4 {
-    margin-top: 5px;
+    font-size: 2em;
   }
 
   .mySlides {
@@ -1369,22 +1549,38 @@ form input[type="number"] {
     margin-top: 3px;
   }
 
-  .navbar .toggle_btn {
-    display: block;
-  }
-
   .navbar .links.action_btn {
     display: flex;
   }
 
   .aboutUs {
-    width: 20rem;
-    margin: 1.3rem auto;
+    margin: 1em auto;
     font: 1rem;
+  }
+
+  .about h1 {
+    font-size: 1.5em;
+  }
+
+  .about p {
+    padding: 0 1.2em;
+    text-align: justify;
+    font-size: 0.9em;
   }
 
   .aboutUs.phone {
     margin-top: 16%;
+  }
+
+  .aboutUs a {
+    font-size: 0.8em;
+    border-radius: 5px;
+  }
+
+  #homep {
+    padding: 0 2em;
+    gap: 0;
+    margin-bottom: 0;
   }
 
   .specialOrder {
@@ -1392,33 +1588,85 @@ form input[type="number"] {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
   }
 
+  #homep > .first {
+    padding: 2rem 0;
+  }
+
+  .specialOrder a {
+    font-size: 0.9em;
+  }
+
+  .specialOrder h4 {
+    font-size: 1.5em;
+  }
+
+  .specialOrder p {
+    font-size: 0.9em;
+  }
+
+  section.last {
+  padding: 0;
+}
   .specialOrder img,
   .specialOrder div {
     width: 80%;
   }
 
   .specialOrder .last {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .specialOrder img {
+    display: none;
+  }
+  .specialOrder div {
+    width: 100%;
+  }
+
+  .first-footer {
+    padding: 2em;
+    gap: 2em;
+    justify-content: flex-start;
   }
 
   .footer-left {
-    display: none;
+    align-items: start;
+  }
+
+  .footer-links a {
+    font-size: 0.7em;
+    color: #eff7ff;
+  }
+
+  .footer-links a:hover {
+    color: #008000;
+    background-color: #eff7ff;
+  }
+
+  .first-footer .addresses {
+    font-size: 0.8em;
   }
 
   .footer-center {
-    margin-left: 3rem;
+    gap: 1em;
+    width: 70%;
   }
 
-  .footer-right {
-    margin-right: 3rem;
+  footer .footer-company-name {
+    font-size: 0.7em;
+    padding: 1em 0;
+    letter-spacing: 1px;
+  }
+
+  footer .footer-company-name a {
+    color: #0690f1;
+  }
+
+  .first-footer {
+    flex-wrap: wrap;
   }
 
   .footer-right i {
@@ -1426,13 +1674,14 @@ form input[type="number"] {
   }
 
   .teamsection {
-    height: 1450px;
+    height: auto;
+    gap: 1em;
   }
 
   .wrapImagesUp,
   .wrapImagesBottom {
     flex-direction: column;
-    gap: 50px;
+    gap: 1em;
     justify-content: space-between;
     margin-bottom: 80px;
   }
@@ -1440,21 +1689,19 @@ form input[type="number"] {
   .wrapImagesUp section span,
   .wrapImagesBottom section span {
     display: inline-block;
-    width: 70%;
+    width: 90%;
     border-radius: 0.6rem;
+  }
+
+  .staff {
+    margin: 0 auto;
   }
 
   .teamsection img {
     border-top-right-radius: 0;
-    width: 70%;
-  }
-
-  .team {
-    margin-top: -20%;
-  }
-
-  .role {
-    background: none;
+    width: 10rem;
+    height: 12rem;
+    margin: 0 auto;
   }
 
   .meals section {
@@ -1465,6 +1712,32 @@ form input[type="number"] {
 
   .menuSpan {
     margin-top: 20%;
+  }
+
+  .meals .each-food {
+    padding: 1em;
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .meals section section {
+    flex-basis: 100%;
+  }
+
+  .meals section img {
+    width: 18em;
+    height: 15em;
+    object-fit: cover;
+  }
+
+  .meals section section h3 {
+    font-size: 1em;
+  }
+
+  .meals section section p {
+    line-height: 1.3;
+    width: 95%;
+    font-size: 0.95em;
   }
 
   /*......Gallery page media qery*/
@@ -1481,24 +1754,172 @@ form input[type="number"] {
     height: 30%;
   }
 
+  .ourgallery {
+    font-size: 2rem;
+  }
+
   .contact {
-    margin-top: 5rem;
+    margin-top: 1rem;
+  }
+
+  .contact-P {
+    width: 90%;
+    text-align: justify;
+    font-size: 0.9em;
   }
 
   .contact form {
     margin: 1rem 3rem;
   }
+
+  #cartContainer {
+    height: 75rem;
+    padding-bottom: 8rem;
+  }
+
+  #cartSplitting {
+    flex-direction: column;
+    width: 90%;
+    padding: 0;
+  }
+
+  .cartSelection {
+    margin-top: 5rem;
+  }
+
+  .button-price {
+    /* font-size: 0.8em; */
+    margin-top: 20rem;
+  }
+
+  .selectedItems {
+    padding: 0.5em;
+    width: 70%;
+    align-items: center;
+  }
+
+  .calculateTotal {
+    font-size: 1em;
+    background: #008000;
+    padding: 0.8rem 0.3em;
+    border-radius: 10px;
+    width: 70%;
+    align-items: center;
+  }
+
+  #forButton {
+    width: 90%;
+  }
+
+  .orderButton {
+    width: 60%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .cartSelection {
+    width: 100%;
+    gap: 0.5em;
+  }
+
+  .cartSelection h1 {
+    font-size: 1em;
+  }
+
+  #paymentOptions {
+    position: absolute;
+    height: 30%;
+    z-index: 999;
+    background-color: rgb(127, 218, 218);
+    top: 60%;
+    left: 0;
+  }
+
+  #cashOnDeliveryForm {
+    width: 80%;
+    filter: drop-shadow(0 0 15px rgb(5, 37, 37));
+  }
+
+  section.cashOnDeliveryForm {
+    left: 10%;
+  }
+
+  .cashOnDeliveryForm h2 {
+    font-size: 1.2em;
+  }
+
+  .cashOnDeliveryForm label {
+    font-size: 0.9em;
+  }
+
+  .paymentOptions {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  .paymentOptions a {
+    font-size: 0.8em;
+  }
+
+  .paymentOptions a:hover {
+    color: #008000;
+    background-color: #eff7ff;
+    width: 100%;
+  }
+
+  #cashOnDeliveryForm .submit button {
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 1.2em;
+  }
+
+  #time {
+    font-size: 0.7em;
+  }
+
+  #menu {
+    font-size: 0.7em;
+    margin-top: -2rem;
+  }
+
+  section .label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #closeCart {
+    right: 1em;
+    font-size: 0.8em;
+  }
+
+  .selection {
+    font-size: 0.9em;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   header {
+    display: flex;
+    justify-content: space-between;
     top: 0;
-    position: fixed;
-    z-index: 999;
+    padding: 0 2em;
+    width: 100%;
   }
 
   .navbar .toggle_btn {
     display: block;
+    font-size: 2rem;
+    color: #003404;
+  }
+
+  .toggle_btn i.fa-bars {
+    font-size: 2rem;
+  }
+
+  .toggle_btn i.fa-times {
+    font-size: 2rem;
+    border: none;
   }
 
   .navbar .links.action_btn {
@@ -1509,31 +1930,53 @@ form input[type="number"] {
     display: none;
   }
 
-  main {
-    margin-top: 7rem;
+  .logo img {
+    width: 90%;
+  }
+
+  .navbar .orderNow a {
+    padding: 1em;
+    font-size: 1em;
+    width: 7rem;
   }
 
   .slideshow-container,
   #menuMain {
-    position: relative;
-    margin: 1rem 1rem 0 1rem;
-    height: 17rem;
+    height: 25rem;
+  }
+
+  .dots {
+    height: 10px;
+    width: 10px;
   }
 
   .mySlides {
-    height: 16.98rem;
+    height: 25rem;
     text-align: center;
   }
 
-  .text {
-    font-size: 0.7rem;
+  .numbertext {
+    font-size: 1rem;
     margin-top: 3px;
   }
 
+  .text {
+    font-size: 1.2rem;
+  }
+
   .aboutUs {
-    width: 20rem;
     margin: 1.3rem auto;
     font: 1rem;
+  }
+
+  .about p {
+    padding: 0 3rem;
+    font-size: 1em;
+  }
+
+  .aboutUs a {
+    font-size: 1rem;
+    border-radius: 10px;
   }
 
   .aboutUs.phone {
@@ -1551,9 +1994,15 @@ form input[type="number"] {
     justify-content: space-between;
   }
 
-  .specialOrder img,
   .specialOrder div {
     width: 80%;
+  }
+
+  section.last {
+  padding: 0;
+}
+  .specialOrder img {
+    display: none;
   }
 
   .specialOrder .last {
@@ -1562,7 +2011,7 @@ form input[type="number"] {
 
   #menuMain {
     position: relative;
-    margin: 8rem 1rem 0 1rem;
+    margin: 2rem 1rem 0 1rem;
     height: 17rem;
   }
 
@@ -1570,44 +2019,39 @@ form input[type="number"] {
     margin-top: 1rem;
   }
 
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .first-footer {
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 
   .footer-left {
-    display: none;
+    justify-content: start;
   }
 
   .footer-right {
     margin-top: 1rem;
   }
-
-  .footer-right div {
-    margin-right: 9rem;
-  }
-
-  .footer-right .pollecode {
-    margin-top: 6rem;
-    margin-left: 2rem;
-  }
-
-  /*
-     .footer-right div{
-    margin-right: 9rem;
-   }
-
-   .footer-right  .pollecode{
-    margin-top: 4rem;
-    margin-left: 1.5rem;
-    
-    
-   }
-     */
-
   .teamsection {
     height: 70rem;
+  }
+
+  .aboutUsPage img {
+    width: 83%;
+  }
+
+  .paragraph p {
+    width: 80%;
+    text-align: justify;
+    margin-top: 1.5rem;
+    font-size: 0.9em;
+  }
+
+  .aboutUsPage h1 {
+    font-size: 1.5em;
+  }
+
+  .aboutUsPage .phone {
+    margin-top: 10%;
   }
 
   .wrapImagesUp,
@@ -1618,9 +2062,20 @@ form input[type="number"] {
     /* margin-bottom: 80px; */
   }
 
+  .wrapImagesUp {
+    gap: 1em;
+  }
+
+  .teamsection {
+    height: auto;
+    gap: 1em;
+  }
+
   .teamsection img {
-    /* border-top-right-radius: 0;*/
-    width: 90%;
+    border-top-right-radius: 0;
+    width: 12rem;
+    height: 15rem;
+    margin: 0 auto;
   }
 
   .wrapImagesUp section,
@@ -1636,8 +2091,32 @@ form input[type="number"] {
     margin-top: 20rem;
   }
 
+  section.food-images {
+    width: 20rem;
+  }
+
+  .meals section {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .menuSpan {
+    margin-top: 20%;
+  }
+
+  .meals section img {
+    width: 20rem;
+    height: 15em;
+    object-fit: cover;
+  }
+
+  .gallery {
+    display: block;
+  }
+
   .gallery img {
-    flex-basis: 49%;
+    width: 40%;
+    padding: 1em;
   }
 
   .contact {
@@ -1645,18 +2124,131 @@ form input[type="number"] {
   }
 
   .contact-P {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
+    width: 80%;
+    text-align: justify;
   }
 
   .contact form {
     margin: 1rem 3rem;
   }
+
+  #contact-form {
+    margin-top: 3rem;
+  }
+
+  #cartSplitting {
+    width: 97%;
+    padding: 2em 0;
+  }
+
+  .cartSelection {
+    width: 70%;
+  }
+
+  .button-price {
+    justify-content: start;
+    width: 30%;
+    padding: 5em 0;
+  }
+
+  .selectedItems {
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .calculateTotal {
+    font-size: 1.2em;
+    background: #008000;
+    padding: 0.8rem 0.3em;
+    border-radius: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .orderButton {
+    font-size: 1em;
+  }
+
+  #closeCart {
+    right: 3em;
+    font-size: 1em;
+  }
+
+  .selection {
+    font-size: 1.2em;
+  }
+
+  #cashOnDeliveryForm {
+    width: 60%;
+    filter: drop-shadow(0 0 15px rgb(5, 37, 37));
+  }
+
+  section.cashOnDeliveryForm {
+    left: 20%;
+  }
+
+  #closeCashOnDeliveryForm {
+    top: 0;
+  }
+
+  .paymentOptions {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .header ul li {
-    margin-top: 1rem;
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  header {
+    width: 100%;
+    padding: 1em 2em;
   }
+
+  .navbar .toggle_btn {
+    display: none;
+  }
+
+  .links {
+    width: 70%;
+  }
+
+  .slideshow-container {
+    height: 35rem;
+  }
+
+  .mySlides {
+    height: 35rem;
+    text-align: center;
+  }
+
+  .numbertext {
+    font-size: 1.5rem;
+    margin-top: 3px;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .aboutUs {
+    margin: 1.3rem auto;
+    font: 1rem;
+  }
+
+  .about p {
+    padding: 0 5rem;
+  }
+
+  .aboutUs a {
+    padding: 0.5em 1em;
+    border-radius: 10px;
+  }
+  /* 
+    .header ul li {
+      margin-top: 1rem;
+    } */
 
   .specialOrder.last .last {
     margin-bottom: 1rem;
@@ -1664,23 +2256,6 @@ form input[type="number"] {
 
   .gallery img {
     flex-basis: 30%;
-  }
-
-  #cartContent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0.3rem;
-    border-radius: 5px;
-    background-image: url(./Images/yeahyeah.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 30rem;
-  }
-
-  #cartContent * {
-    font-size: small;
   }
 
   #forButton button {
@@ -1693,5 +2268,100 @@ form input[type="number"] {
 
   .pollecode {
     margin-top: 5rem;
+  }
+
+  #cartContainer {
+    height: 60rem;
+  }
+
+  #cartSplitting {
+    width: 95%;
+    padding: 0;
+  }
+
+  .cartSelection {
+    margin-top: 5rem;
+  }
+
+  .button-price {
+    background: olivedrab;
+  }
+
+  #closeCart {
+    right: 3em;
+  }
+
+  .teamsection img {
+    width: 13rem;
+    height: 15rem;
+  }
+
+  .wrapImagesUp {
+    flex-wrap: wrap;
+  }
+
+  .aboutUsPage img {
+    width: 90%;
+  }
+
+  .paragraph p {
+    width: 90%;
+  }
+
+  section.teamMember {
+    height: auto;
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  section.teamMember p {
+    width: 90%;
+  }
+
+  .gallery {
+    display: block;
+  }
+
+  .gallery img {
+    width: 45%;
+    padding: 1em;
+  }
+
+  .contact-P {
+    width: 60%;
+  }
+
+  #contact-form {
+    margin-top: 2rem;
+  }
+
+  .contact {
+    margin-top: 7rem;
+  }
+
+  .contact-P {
+    margin-top: 1.5rem;
+    width: 80%;
+    text-align: justify;
+  }
+
+  .contact form {
+    margin: 1rem 3rem;
+  }
+
+  #contact-form {
+    margin-top: 3rem;
+  }
+
+  #cashOnDeliveryForm {
+    width: 50%;
+    filter: drop-shadow(0 0 15px rgb(5, 37, 37));
+  }
+
+  section.cashOnDeliveryForm {
+    left: 20%;
+  }
+
+  #closeCashOnDeliveryForm {
+    top: 0;
   }
 }

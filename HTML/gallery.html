@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gallery- Tasty Yumzie</title>
     <script src="https://kit.fontawesome.com/56e3e27d55.js" crossorigin="anonymous"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=ARWKLYWAMpet80DqcnG1g8Tr47Kr9ANzcRlthrkQPjDgEy3QQKLm9N-lUm23OOwSeSHDGRvSqkdIZD_5"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -40,7 +41,6 @@
           <li><a href="menu.html">MENUS</a></li>
           <li><a href="gallery.html">gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="orderNow"><a>Order Now</a></li>
         </ul>
       </section>
     </header>
@@ -536,21 +536,79 @@
         <!-- Calculate total and checkout -->
 
         <section class="button-price">
+          <section class="selectedItems">
+            <p>Selected Items</p>
+            <div id="selectedItems"></div>
+          </section>
           <section class="calculateTotal">
-            <p class="calculate" onclick="calculateTotal()">Calculate Total</p>
+            <!-- <p class="calculate" onclick="calculateTotal()">Calculate Total</p> -->
+
             <p id="total">Total Amount: # 0.00</p>
           </section>
           <section id="forButton">
-            <button class="orderButton" onclick="redirect()">Make Order</button>
+            <button class="orderButton">Make Order</button>
+
+            <!-- Add payment options and cash on delivery form -->
+            <section id="paymentOptions" style="display: none">
+              <button
+                id="cashOnDeliveryBtn"
+                style="cursor: pointer"
+                onclick="showCashOnDeliveryForm(); closePaymentOptions()"
+              >
+                Cash on Delivery
+              </button>
+
+              <div id="paypal-button-container" style="cursor: pointer"></div>
+            </section>
           </section>
         </section>
       </section>
       <span id="closeCart"><i class="fas fa-times"></i></span>
     </section>
        
+    <!-- Cash on Delivery Form -->
+    <section
+      id="cashOnDeliveryForm"
+      class="cashOnDeliveryForm"
+      style="
+        display: none;
+        z-index: 10000;
+      "
+    >
+      <button
+        id="closeCashOnDeliveryForm"
+        onclick="closeCashOnDeliveryForm()"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>You will pay <span id="amountToPay">$0.00</span> on delivery</h2>
+      <form id="cashOnDeliveryDetailsForm">
+        <div class="cashOnDeliveryDetails">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            class="phoneNumber"
+            name="phone"
+            required
+          />
+        </div>
+
+        <button class="confirmOrder" type="submit">Confirm Order</button>
+      </form>
+    </section
 </body>
 </html>
 
-<script src="../script.js/gallery.js"></script>   
+<script src="../Script/gallery.js"></script>   
         
 </body>

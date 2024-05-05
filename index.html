@@ -5,6 +5,7 @@
       src="https://kit.fontawesome.com/56e3e27d55.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=ARWKLYWAMpet80DqcnG1g8Tr47Kr9ANzcRlthrkQPjDgEy3QQKLm9N-lUm23OOwSeSHDGRvSqkdIZD_5"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,9 +33,7 @@
     <header class="header">
       <section class="navbar">
         <div class="logo">
-          <a href="./index.html"
-            ><img src="./Images/cover.png" alt=""
-          /></a>
+          <a href="./index.html"><img src="./Images/cover.png" alt="" /></a>
         </div>
 
         <ul class="links">
@@ -66,7 +65,6 @@
           <li>
             <a href="./HTML/contact.html">Contact</a>
           </li>
-          <li class="orderNow"><a>Order Now</a></li>
         </ul>
       </section>
     </header>
@@ -76,72 +74,50 @@
         <!--Full-width images with number and caption text-->
         <section class="mySlides fade">
           <section class="numbertext">1/4</section>
-          <img
-            src="./Images/gallery1.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/gallery1.jpg" alt="heroImage" />
           <section class="text"><span>Burgoes Mela $5.20</span></section>
         </section>
         <section class="mySlides fade">
           <section class="numbertext">2/11</section>
-          <img
-            src="./Images/chicken-waffles.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/chicken-waffles.jpg" alt="heroImage" />
           <section class="text"><span>Chicken Waffles $7.50</span></section>
         </section>
 
         <section class="mySlides fade">
           <section class="numbertext">3/11</section>
-          <img
-            src="./Images/Chicken-Parmesan.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/Chicken-Parmesan.jpg" alt="heroImage" />
           <section class="text"><span>Chicken Parmesan $10.00</span></section>
         </section>
 
         <section class="mySlides fade">
           <section class="numbertext">4/11</section>
-          <img
-            src="./Images/chocolate-lava-cake.jpg"
-            alt="heroImage"
-          />
-          <section class="text"><span>Chocolate Lava Cake $17.20</span></section>
+          <img src="./Images/chocolate-lava-cake.jpg" alt="heroImage" />
+          <section class="text">
+            <span>Chocolate Lava Cake $17.20</span>
+          </section>
         </section>
 
         <section class="mySlides fade">
           <section class="numbertext">5/11</section>
-          <img
-            src="./Images/hamburger.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/hamburger.jpg" alt="heroImage" />
           <section class="text"><span>Hamburger $8.60</span></section>
         </section>
 
         <section class="mySlides fade">
           <section class="numbertext">6/11</section>
-          <img
-            src="./Images/bbq-ribs.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/bbq-ribs.jpg" alt="heroImage" />
           <section class="text"><span>Barbecue Ribs $16.40</span></section>
         </section>
 
         <section class="mySlides fade">
           <section class="numbertext">7/11</section>
-          <img
-            src="./Images/club-sandwich.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/club-sandwich.jpg" alt="heroImage" />
           <section class="text"><span>Club Sandwich $9.40</span></section>
         </section>
 
         <section class="mySlides fade">
           <section class="numbertext">8/11</section>
-          <img
-            src="./Images/tastyBackgroundPics.jpg"
-            alt="heroImage"
-          />
+          <img src="./Images/tastyBackgroundPics.jpg" alt="heroImage" />
           <section class="text"><span>Honey Waffles $5.90</span></section>
         </section>
 
@@ -182,7 +158,6 @@
         <span class="dot" onclick="currentSlide(9)"></span>
         <span class="dot" onclick="currentSlide(10)"></span>
         <span class="dot" onclick="currentSlide(11)"></span>
-
       </section>
     </main>
     <section class="aboutUs">
@@ -202,7 +177,7 @@
     </section>
 
     <section id="homep">
-      <section class="specialOrder">
+      <section class="specialOrder first">
         <div>
           <h4>Special Services</h4>
           <p>
@@ -220,7 +195,8 @@
       </section>
 
       <section class="specialOrder last">
-        <img src="./Images/food-images.png" alt="" />
+        <section><img src="./Images/food-images.png" alt="" id="buffet"/></section>
+        
         <div class="last">
           <h4>Menus</h4>
           <p>
@@ -228,9 +204,7 @@
             with the freshest ingredients to satisfy your cravings.
           </p>
           <div class="click">
-            <a class="clickHere" href="./HTML/menu.html"
-              >CLick Here</a
-            >
+            <a class="clickHere" href="./HTML/menu.html">CLick Here</a>
           </div>
         </div>
       </section>
@@ -313,7 +287,7 @@
             <!-- Time of the day selection -->
 
             <section class="label">
-              <label for="time">Select meal:</label>
+              <label for="time" class="selection">Select meal:</label>
               <select id="time" onchange="showMeals()">
                 <option value="choose">Choose Meal Type</option>
                 <option value="brunch">Brunch</option>
@@ -333,69 +307,48 @@
             <ul id="brunch-meals" style="display: none">
               <li>
                 <span class="mealName">Eggs Benedict</span>
-                <img
-                  src="./Images/eggs-benedict.jpg"
-                  alt=""
-                />
+                <img src="./Images/eggs-benedict.jpg" alt="" />
                 <span>$4.30</span>
                 <input type="number" id="meal1" value="0" />
               </li>
               <li>
                 <span class="mealName">Avocado Toast</span>
-                <img
-                  src="./Images/avocado-toast.jpg"
-                  alt=""
-                />
+                <img src="./Images/avocado-toast.jpg" alt="" />
                 <span>$4.70</span>
                 <input type="number" id="meal2" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Breakfast Burritott</span>
-                <img
-                  src="./Images/Breakfast-Burritos.jpg"
-                  alt=""
-                />
+                <img src="./Images/Breakfast-Burritos.jpg" alt="" />
                 <span>$5.30</span>
                 <input type="number" id="meal3" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Buttermilk Pancake</span>
-                <img
-                  src="./Images/tastyBackgroundPics.jpg"
-                  alt=""
-                />
+                <img src="./Images/tastyBackgroundPics.jpg" alt="" />
                 <span>$4.50</span>
                 <input type="number" id="meal4" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Chicken and Waffles</span>
-                <img
-                  src="./Images/chicken-waffles.jpg"
-                  alt=""
-                />
+                <img src="./Images/chicken-waffles.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal5" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Smoked Salmon Bagelt</span>
-                <img
-                  src="./Images/Smoked-Salmon.png"
-                  alt=""
-                />
+                <img src="./Images/Smoked-Salmon.png" alt="" />
                 <span>$5.20</span>
                 <input type="number" id="meal6" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Belgian Waffles</span>
-                <img
-                  src="./Images/belgian-waffles.jpeg"
-                  alt=""
-                />
+                <img src="./Images/belgian-waffles.jpeg" alt="" />
                 <span>$3.60</span>
                 <input type="number" id="meal7" value="0" />
               </li>
@@ -406,29 +359,20 @@
             <ul id="lunch-meals" style="display: none">
               <li>
                 <span class="mealName">Hamburger</span>
-                <img
-                  src="./Images/hamburger.jpg"
-                  alt=""
-                />
+                <img src="./Images/hamburger.jpg" alt="" />
                 <span>$4.30</span>
                 <input type="number" id="meal8" value="0" />
               </li>
               <li>
                 <span class="mealName">Club Sandwich</span>
-                <img
-                  src="./Images/club-sandwich.jpg"
-                  alt=""
-                />
+                <img src="./Images/club-sandwich.jpg" alt="" />
                 <span>$5.60</span>
                 <input type="number" id="meal9" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Caprese Panini</span>
-                <img
-                  src="./Images/caprese-panini.jpg"
-                  alt=""
-                />
+                <img src="./Images/caprese-panini.jpg" alt="" />
                 <span>$5.80</span>
                 <input type="number" id="meal10" value="0" />
               </li>
@@ -442,40 +386,28 @@
 
               <li>
                 <span class="mealName">Caesar Salad</span>
-                <img
-                  src="./Images/Caesar-Salad.jpg"
-                  alt=""
-                />
+                <img src="./Images/Caesar-Salad.jpg" alt="" />
                 <span>$5.50</span>
                 <input type="number" id="meal12" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Fish Tacos</span>
-                <img
-                  src="./Images/fish-tacos.jpeg"
-                  alt=""
-                />
+                <img src="./Images/fish-tacos.jpeg" alt="" />
                 <span>$5.20</span>
                 <input type="number" id="meal13" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Chicken Caesar Wrap</span>
-                <img
-                  src="./Images/Chicken-Caesar-Wraps.jpg"
-                  alt=""
-                />
+                <img src="./Images/Chicken-Caesar-Wraps.jpg" alt="" />
                 <span>$3.80</span>
                 <input type="number" id="meal14" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Cobb Salad</span>
-                <img
-                  src="./Images/cobb-salad.jpg"
-                  alt=""
-                />
+                <img src="./Images/cobb-salad.jpg" alt="" />
                 <span>$6.20</span>
                 <input type="number" id="meal15" value="0" />
               </li>
@@ -485,79 +417,55 @@
             <ul id="dinner-meals" style="display: none">
               <li>
                 <span class="mealName">Steakhouse Steak</span>
-                <img
-                  src="./Images/Steak-Houses.jpg"
-                  alt=""
-                />
+                <img src="./Images/Steak-Houses.jpg" alt="" />
                 <span>$7.20</span>
                 <input type="number" id="meal16" value="0" />
               </li>
               <li>
                 <span class="mealName">Pasta Carbonara</span>
-                <img
-                  src="./Images/Spaghetti-Carbonara.jpg"
-                  alt=""
-                />
+                <img src="./Images/Spaghetti-Carbonara.jpg" alt="" />
                 <span>$6.00</span>
                 <input type="number" id="meal17" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Chicken Parmesan</span>
-                <img
-                  src="./Images/Chicken-Parmesan.jpg"
-                  alt=""
-                />
+                <img src="./Images/Chicken-Parmesan.jpg" alt="" />
                 <span>$4.75</span>
                 <input type="number" id="meal18" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Tacos Al Pastor</span>
-                <img
-                  src="./Images/al-pastor.jpg"
-                  alt=""
-                />
+                <img src="./Images/al-pastor.jpg" alt="" />
                 <span>$3.50</span>
                 <input type="number" id="meal19" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Lobster Roll</span>
-                <img
-                  src="./Images/lobster-roll.jpg"
-                  alt=""
-                />
+                <img src="./Images/lobster-roll.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal20" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Sushi Platter</span>
-                <img
-                  src="./Images/sushi-platter.jpg"
-                  alt=""
-                />
+                <img src="./Images/sushi-platter.jpg" alt="" />
                 <span>$5.25</span>
                 <input type="number" id="meal21" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Shrimp Scamp</span>
-                <img
-                  src="./Images/Shrimp-Scampi.jpg"
-                  alt=""
-                />
+                <img src="./Images/Shrimp-Scampi.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal22" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Grilled Salmon</span>
-                <img
-                  src="./Images/grilled-salmon.jpg"
-                  alt=""
-                />
+                <img src="./Images/grilled-salmon.jpg" alt="" />
                 <span>$5.25</span>
                 <input type="number" id="meal23" value="0" />
               </li>
@@ -572,59 +480,41 @@
             >
               <li>
                 <span class="mealName">Cabernet Sauvignon</span>
-                <img
-                  src="./Images/cabernet-sauvignon.jpg"
-                  alt=""
-                />
+                <img src="./Images/cabernet-sauvignon.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal24" value="0" />
               </li>
               <li>
                 <span class="mealName">Sauvignon Blanc</span>
-                <img
-                  src="./Images/sauvignon-blanc.jpg"
-                  alt=""
-                />
+                <img src="./Images/sauvignon-blanc.jpg" alt="" />
                 <span>$5.55</span>
                 <input type="number" id="meal25" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Mojito</span>
-                <img
-                  src="./Images/mojito-cocktails.jpg"
-                  alt=""
-                />
+                <img src="./Images/mojito-cocktails.jpg" alt="" />
                 <span>$6.25</span>
                 <input type="number" id="meal26" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Chardonnay</span>
-                <img
-                  src="./Images/bottle-white-wine-glass-.jpg"
-                  alt=""
-                />
+                <img src="./Images/bottle-white-wine-glass-.jpg" alt="" />
                 <span>$3.65</span>
                 <input type="number" id="meal27" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Margarita</span>
-                <img
-                  src="./Images/The-Best-Margarita.jpg"
-                  alt=""
-                />
+                <img src="./Images/The-Best-Margarita.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal28" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Manhattan</span>
-                <img
-                  src="./Images/manhantan.jpg"
-                  alt=""
-                />
+                <img src="./Images/manhantan.jpg" alt="" />
                 <span>$4.50</span>
                 <input type="number" id="meal29" value="0" />
               </li>
@@ -641,59 +531,41 @@
             <ul id="desserts-meals" style="display: none">
               <li>
                 <span class="mealName">Apple Pie</span>
-                <img
-                  src="./Images/apple-pie.jpg"
-                  alt=""
-                />
+                <img src="./Images/apple-pie.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal31" value="0" />
               </li>
               <li>
                 <span class="mealName">Chocolate Lava Cake</span>
-                <img
-                  src="./Images/chocolate-lava-cake.jpg"
-                  alt=""
-                />
+                <img src="./Images/chocolate-lava-cake.jpg" alt="" />
                 <span>$5.00</span>
                 <input type="number" id="meal32" value="0" />
               </li>
 
               <li>
                 <span class="mealName">New York Cheesecake</span>
-                <img
-                  src="./Images/cheese-cake.jpg"
-                  alt=""
-                />
+                <img src="./Images/cheese-cake.jpg" alt="" />
                 <span>$4.50</span>
                 <input type="number" id="meal33" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Crème Brûlée</span>
-                <img
-                  src="./Images/creme-brulee.jpg"
-                  alt=""
-                />
+                <img src="./Images/creme-brulee.jpg" alt="" />
                 <span>$5.25</span>
                 <input type="number" id="meal34" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Key Lime Pie</span>
-                <img
-                  src="./Images/Key-Lime-Pie.jpg"
-                  alt=""
-                />
+                <img src="./Images/Key-Lime-Pie.jpg" alt="" />
                 <span>$4.75</span>
                 <input type="number" id="meal35" value="0" />
               </li>
 
               <li>
                 <span class="mealName">Brownie Sundae</span>
-                <img
-                  src="./Images/brownie-sundae.jpg"
-                  alt=""
-                />
+                <img src="./Images/brownie-sundae.jpg" alt="" />
                 <span>$4.00</span>
                 <input type="number" id="meal36" value="0" />
               </li>
@@ -703,12 +575,30 @@
         <!-- Calculate total and checkout -->
 
         <section class="button-price">
+          <section class="selectedItems">
+            <p>Selected Items</p>
+            <div id="selectedItems"></div>
+          </section>
           <section class="calculateTotal">
-            <p class="calculate" onclick="calculateTotal()">Calculate Total</p>
+            <!-- <p class="calculate" onclick="calculateTotal()">Calculate Total</p> -->
+
             <p id="total">Total Amount: # 0.00</p>
           </section>
           <section id="forButton">
-            <button class="orderButton" onclick="redirect()">Make Order</button>
+            <button class="orderButton">Make Order</button>
+
+            <!-- Add payment options and cash on delivery form -->
+            <section id="paymentOptions" style="display: none">
+              <button
+                id="cashOnDeliveryBtn"
+                style="cursor: pointer"
+                onclick="showCashOnDeliveryForm(); closePaymentOptions()"
+              >
+                Cash on Delivery
+              </button>
+
+              <div id="paypal-button-container" style="cursor: pointer"></div>
+            </section>
           </section>
         </section>
       </section>
@@ -748,8 +638,47 @@
         </form>
       </div>
     </div>
+
+    <!-- Cash on Delivery Form -->
+    <section
+      id="cashOnDeliveryForm"
+      class="cashOnDeliveryForm"
+      style="
+        display: none;
+        z-index: 10000;
+      "
+    >
+      <button
+        id="closeCashOnDeliveryForm"
+        onclick="closeCashOnDeliveryForm()"
+       
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>You will pay <span id="amountToPay">$0.00</span> on delivery</h2>
+      <form id="cashOnDeliveryDetailsForm">
+        <div class="cashOnDeliveryDetails">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            class="phoneNumber"
+            name="phone"
+            required
+          />
+        </div>
+
+        <button class="confirmOrder" type="submit">Confirm Order</button>
+      </form>
+    </section>
   </body>
 </html>
 
 <!-- <script src="food.js"></script> -->
-<script src="./script.js/food.js"></script>
+<script src="./Script/food.js"></script>

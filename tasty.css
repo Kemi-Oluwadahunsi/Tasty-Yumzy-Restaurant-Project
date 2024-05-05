@@ -143,6 +143,7 @@ header {
 
 main {
   background-color: #eff7ff;
+  padding-bottom: 1em;
 }
 
 /* Slideshow container */
@@ -265,6 +266,7 @@ main {
   place-items: center;
   margin: 0 auto;
   padding-bottom: 2em;
+  padding-top: 2em;
 }
 
 .aboutUs h2 {

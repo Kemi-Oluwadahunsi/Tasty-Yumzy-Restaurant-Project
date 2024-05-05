@@ -217,6 +217,7 @@ document.getElementById("cashOnDeliveryDetailsForm").addEventListener("submit", 
   // Clear form inputs
   event.target.reset();
   closeCashOnDeliveryForm(); // Close the form after submission
+  closeCart();
 });
 
 function closeCashOnDeliveryForm() {
@@ -253,6 +254,7 @@ function initializePayPalButton(totalAmount) {
         alert(
           `Payment status: Successful!\n\nOrder Confirmed!\nThanks for your patronage!\n\nBuyer Information:\nName: ${buyerInfo.name}\nEmail: ${buyerInfo.email}\nAddress: ${buyerInfo.address}\nTotal Amount: $${buyerInfo.totalAmount}\n\nYour order is being prepared. Our rider will reach you as soon as possible!`
         );
+        closeCart();
       });
     }
   }).render('#paypal-button-container'); // Render PayPal button in specified container

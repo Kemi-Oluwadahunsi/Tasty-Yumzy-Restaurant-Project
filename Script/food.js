@@ -213,6 +213,7 @@ document
         "\nNumber of seat: " +
         partySize
     );
+    closeForm();
   });
 
 
@@ -325,6 +326,7 @@ function closeCashOnDeliveryForm() {
 
 // Function to initialize PayPal button
 function initializePayPalButton(totalAmount) {
+
   
   paypal.Buttons({
     createOrder: function(data, actions) {
@@ -370,6 +372,7 @@ function handleMakeOrderButtonClick() {
   if (!isNaN(totalAmount) && totalAmount > 0) {
     // Initialize PayPal button with total amount
     initializePayPalButton(totalAmount);
+    
 
     // Toggle visibility of payment options
 

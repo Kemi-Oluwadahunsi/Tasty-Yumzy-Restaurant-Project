@@ -1811,7 +1811,7 @@ section.cashOnDeliveryForm {
 
   .button-price {
     /* font-size: 0.8em; */
-    margin-top: 20rem;
+    margin-top: 22rem;
   }
 
   .selectedItems {
@@ -1897,11 +1897,11 @@ section.cashOnDeliveryForm {
   }
 
   #time {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   #menu {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin-top: -2rem;
   }
 

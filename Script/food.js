@@ -169,7 +169,7 @@ function calculateTotal() {
 
   // Display the total amount
   document.getElementById("total").innerHTML =
-    "Total Amount: $ " + totalAmount.toFixed(2);
+    "Total Amount: # " + totalAmount.toFixed(2);
 }
 
 

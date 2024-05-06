@@ -262,7 +262,7 @@ mealOptions.forEach((option) => {
 
 // Function to show the cash on delivery form and update the amount to pay
 function showCashOnDeliveryForm() {
-  const totalAmount = parseFloat(document.getElementById("total").innerText.replace("Total Amount: $ ", ""));
+  const totalAmount = parseFloat(document.getElementById("total").innerText.replace("Total Amount: # ", ""));
   document.getElementById("amountToPay").textContent = "$" + totalAmount.toFixed(2);
   document.getElementById("cashOnDeliveryForm").style.display = "block";
 }
@@ -297,8 +297,8 @@ document.querySelector(".orderButton").addEventListener("click", function() {
 
 // Function to show the cash on delivery form and update the amount to pay
 function showCashOnDeliveryForm() {
-  const totalAmount = parseFloat(document.getElementById("total").innerText.replace("Total Amount: $ ", ""));
-  document.getElementById("amountToPay").textContent = "$" + totalAmount.toFixed(2);
+  const totalAmount = parseFloat(document.getElementById("total").innerText.replace("Total Amount: # ", ""));
+  document.getElementById("amountToPay").textContent = "#" + totalAmount.toFixed(2);
   document.getElementById("cashOnDeliveryForm").style.display = "block";
 }
 
@@ -350,7 +350,7 @@ function initializePayPalButton(totalAmount) {
 
         // Display buyer information in an alert
         alert(
-          `Payment status: Successful!\n\nOrder Confirmed!\nThanks for your patronage!\n\nBuyer Information:\nName: ${buyerInfo.name}\nEmail: ${buyerInfo.email}\nAddress: ${buyerInfo.address}\nTotal Amount: $${buyerInfo.totalAmount}\n\nYour order is being prepared. Our rider will reach you as soon as possible!`
+          `Payment status: Successful!\n\nOrder Confirmed!\nThanks for your patronage!\n\nBuyer Information:\nName: ${buyerInfo.name}\nEmail: ${buyerInfo.email}\nAddress: ${buyerInfo.address}\nTotal Amount: #${buyerInfo.totalAmount}\n\nYour order is being prepared. Our rider will reach you as soon as possible!`
         );
         closeCart();
       });
@@ -364,7 +364,7 @@ function handleMakeOrderButtonClick() {
   calculateTotal();
   
   // Retrieve the total amount after calculation
-  const totalAmount = parseFloat(document.getElementById("total").innerText.replace("Total Amount: $ ", ""));
+  const totalAmount = parseFloat(document.getElementById("total").innerText.replace("Total Amount: # ", ""));
   
   // Check if totalAmount is a valid number
   if (!isNaN(totalAmount) && totalAmount > 0) {

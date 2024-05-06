@@ -2126,6 +2126,15 @@ form input[type="number"] {
     margin: 0 auto;
   }
 
+  section.teamMember {
+    height: auto;
+    padding: 0 3rem 2rem 3rem;
+  }
+
+  section.teamMember p {
+    width: 100%;
+  }
+
   .wrapImagesUp section,
   .wrapImagesBottom section {
     flex-basis: 40%;

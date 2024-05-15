@@ -23,6 +23,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link rel="stylesheet" href="./tasty.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -52,7 +57,7 @@
         <button class="orderNow"><a>Order Now</a></button>
         <div class="toggle_btn"><i class="fas fa-bars"></i></div>
       </section>
-      <section class="mobileContainer">
+      <section class="mobileContainer animate__animated animate__fadeInBottomLeft">
         <ul id="mobile">
           <li><a href="./index.html">Home</a></li>
           <li>
@@ -195,8 +200,10 @@
       </section>
 
       <section class="specialOrder last">
-        <section><img src="./Images/food-images.png" alt="" id="buffet"/></section>
-        
+        <section>
+          <img src="./Images/food-images.png" alt="" id="buffet" />
+        </section>
+
         <div class="last">
           <h4>Menus</h4>
           <p>
@@ -643,16 +650,9 @@
     <section
       id="cashOnDeliveryForm"
       class="cashOnDeliveryForm"
-      style="
-        display: none;
-        z-index: 10000;
-      "
+      style="display: none; z-index: 10000"
     >
-      <button
-        id="closeCashOnDeliveryForm"
-        onclick="closeCashOnDeliveryForm()"
-       
-      >
+      <button id="closeCashOnDeliveryForm" onclick="closeCashOnDeliveryForm()">
         <i class="fas fa-times"></i>
       </button>
       <h2>You will pay <span id="amountToPay">#0.00</span> on delivery</h2>

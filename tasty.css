@@ -109,6 +109,11 @@ header {
   width: 60%;
   height: 100%;
   z-index: 9999;
+  
+}
+
+.animate__animated.animate__fadeInBottomLeft {
+  --animate-duration: 1s;
 }
 
 .mobileContainer.show-menu {
@@ -117,6 +122,9 @@ header {
 
 #mobile {
   margin-top: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 #mobile li {
@@ -151,7 +159,6 @@ main {
   position: relative;
   margin: 0 auto;
 }
-
 
 /* Hide the images by default */
 .mySlides {
@@ -1113,7 +1120,6 @@ li input {
   font-weight: bold;
 }
 
-
 .selectedItems {
   background: #eff7ff;
   padding: 1rem 2rem;
@@ -1617,8 +1623,8 @@ section.cashOnDeliveryForm {
   }
 
   section.last {
-  padding: 0;
-}
+    padding: 0;
+  }
   .specialOrder img,
   .specialOrder div {
     width: 80%;
@@ -1919,7 +1925,7 @@ section.cashOnDeliveryForm {
     font-size: 0.9em;
   }
 
-   #reservation-form{
+  #reservation-form {
     width: 80%;
     top: 15%;
     left: 10%;
@@ -1930,10 +1936,10 @@ section.cashOnDeliveryForm {
   }
 
   form input[type="text"],
-form input[type="email"],
-form input[type="number"] {
-  margin-bottom: 20px;
-}
+  form input[type="email"],
+  form input[type="number"] {
+    margin-bottom: 20px;
+  }
 
   #close-button {
     top: 13%;
@@ -1946,13 +1952,17 @@ form input[type="number"] {
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
   header {
     display: flex;
     justify-content: space-between;
     top: 0;
     padding: 0 2em;
     width: 100%;
+  }
+
+  #mobile li a {
+    font-size: 1.5rem;
   }
 
   .navbar .toggle_btn {
@@ -2047,8 +2057,8 @@ form input[type="number"] {
   }
 
   section.last {
-  padding: 0;
-}
+    padding: 0;
+  }
   .specialOrder img {
     display: none;
   }
@@ -2256,7 +2266,7 @@ form input[type="number"] {
     padding: 1em;
   }
 
-  #reservation-form{
+  #reservation-form {
     width: 50%;
     top: 15%;
     left: 25%;
@@ -2267,10 +2277,10 @@ form input[type="number"] {
   }
 
   form input[type="text"],
-form input[type="email"],
-form input[type="number"] {
-  margin-bottom: 20px;
-}
+  form input[type="email"],
+  form input[type="number"] {
+    margin-bottom: 20px;
+  }
 
   #close-button {
     top: 13%;
@@ -2283,7 +2293,7 @@ form input[type="number"] {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
   header {
     width: 100%;
     padding: 1em 2em;
@@ -2448,7 +2458,7 @@ form input[type="number"] {
     top: 0;
   }
 
-  #reservation-form{
+  #reservation-form {
     width: 50%;
     top: 19%;
     left: 25%;
